@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link2, Phone, PhoneCall, Building2, Wifi, Shield, ArrowRight, Radio, Cpu } from 'lucide-react';
+import { Link2, PhoneCall, Building2, ArrowRight, Cpu } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
@@ -14,14 +14,6 @@ export default function SolutionsSection() {
             priceNote: '(mesmo município)',
             features: ['Conexão dedicada', 'Alta segurança', 'Baixa latência'],
             color: 'blue'
-        },
-        {
-            icon: Radio,
-            title: 'Telefonia Móvel & M2M',
-            description: 'Conectividade 5G e soluções inteligentes para sensores, rastreamento e IoT empresarial.',
-            price: 'Móvel: R$ 24,99 | M2M: R$ 4,58',
-            features: ['Cobertura 5G', 'IoT/Sensores', 'Rastreamento'],
-            color: 'green'
         },
         {
             icon: PhoneCall,
@@ -131,31 +123,6 @@ export default function SolutionsSection() {
                     ))}
                 </div>
 
-                {/* Partnership Banner */}
-                <motion.div 
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="mt-16 bg-gradient-to-r from-gray-900 to-gray-800 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8"
-                >
-                    <div className="flex items-center gap-6">
-                        <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center">
-                            <Shield className="w-8 h-8 text-orange-400" />
-                        </div>
-                        <div>
-                            <h3 className="text-2xl font-bold text-white mb-2">Parceria Olli IXIC</h3>
-                            <p className="text-gray-400">Soluções de Automação Residencial e Condominial hospedadas na infraestrutura em nuvem da Freeway.</p>
-                        </div>
-                    </div>
-                    <Button 
-                        size="lg" 
-                        className="bg-orange-500 hover:bg-orange-600 text-white whitespace-nowrap"
-                        onClick={() => openChat('Parceria Olli IXIC')}
-                    >
-                        Conhecer Parceria
-                        <ArrowRight className="ml-2 w-5 h-5" />
-                    </Button>
-                </motion.div>
             </div>
         </section>
     );

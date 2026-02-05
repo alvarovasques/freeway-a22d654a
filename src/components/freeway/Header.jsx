@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Phone, MapPin, Clock, Menu, X } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from 'framer-motion';
+import logo from '@/assets/logo.png';
 
 export default function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -55,7 +56,7 @@ export default function Header() {
                         {/* Logo */}
                         <a href="#" className="flex items-center">
                             <img 
-                                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69849cab90d0616170d0109b/aad82955b_logo.png" 
+                                src={logo} 
                                 alt="Freeway Tecnologia" 
                                 className="h-12 w-auto"
                             />
