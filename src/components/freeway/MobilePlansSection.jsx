@@ -7,8 +7,11 @@ import { Badge } from "@/components/ui/badge";
 export default function MobilePlansSection() {
     const [activeTab, setActiveTab] = useState('mobile');
 
-    const openChat = (planName) => {
-        window.open(`https://api.whatsapp.com/send?phone=556730253131&text=Olá! Tenho interesse no plano ${planName}. Gostaria de mais informações.`, '_blank');
+    const openChat = () => {
+        // Open Redrive chat widget
+        if (window.redriveWidget) {
+            window.redriveWidget.open();
+        }
     };
 
     const mobilePlans = [

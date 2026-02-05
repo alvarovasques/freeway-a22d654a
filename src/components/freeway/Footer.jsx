@@ -42,12 +42,11 @@ export default function Footer() {
                             Pioneira em fibra óptica no Mato Grosso do Sul, conectando empresas e governo com a melhor infraestrutura da região.
                         </p>
 
-                        {/* Contact Info */}
                         <div className="space-y-3">
-                            <a href="https://api.whatsapp.com/send?phone=556730253131" className="flex items-center gap-3 text-gray-400 hover:text-orange-400 transition-colors">
+                            <button onClick={() => window.redriveWidget?.open()} className="flex items-center gap-3 text-gray-400 hover:text-orange-400 transition-colors">
                                 <Phone className="w-5 h-5" />
                                 <span>(67) 3025-3131</span>
-                            </a>
+                            </button>
                             <div className="flex items-center gap-3 text-gray-400">
                                 <MapPin className="w-5 h-5 flex-shrink-0" />
                                 <span>R. Goiás, 1757 - Campo Grande, MS</span>

@@ -6,8 +6,10 @@ import mapaMS from '@/assets/mapa-ms.png';
 
 export default function HeroSection() {
     const openChat = () => {
-        // Will be replaced with embedded chat later
-        window.open('https://api.whatsapp.com/send?phone=556730253131&text=Olá! Gostaria de falar com um consultor especialista.', '_blank');
+        // Open Redrive chat widget
+        if (window.redriveWidget) {
+            window.redriveWidget.open();
+        }
     };
 
     return (

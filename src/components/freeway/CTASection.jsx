@@ -30,7 +30,7 @@ export default function CTASection() {
                         <Button 
                             size="lg" 
                             className="bg-gray-900 text-white hover:bg-gray-800 shadow-2xl text-lg px-10 py-7 font-bold"
-                            onClick={() => window.open('https://api.whatsapp.com/send?phone=556730253131&text=Olá! Gostaria de falar com um consultor especialista.', '_blank')}
+                            onClick={() => window.redriveWidget?.open()}
                         >
                             <MessageCircle className="mr-3 w-6 h-6" />
                             Falar com Consultor Especialista
