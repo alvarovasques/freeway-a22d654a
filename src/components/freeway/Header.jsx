@@ -24,7 +24,10 @@ export default function Header() {
     ];
 
     const openChat = () => {
-        window.open('https://api.whatsapp.com/send?phone=556730253131&text=Olá! Gostaria de falar com um consultor especialista.', '_blank');
+        // Open Redrive chat widget
+        if (window.redriveWidget) {
+            window.redriveWidget.open();
+        }
     };
 
     return (

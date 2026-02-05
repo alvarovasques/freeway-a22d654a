@@ -464,10 +464,7 @@ export default function SolutionsCalculator() {
                                             <Button 
                                                 size="lg" 
                                                 className="bg-orange-500 hover:bg-orange-600 text-white whitespace-nowrap gap-2"
-                                                onClick={() => {
-                                                    // Will open embedded chat later
-                                                    window.open('https://api.whatsapp.com/send?phone=556730253131&text=Olá! Utilizei a calculadora de soluções e gostaria de um orçamento personalizado.', '_blank');
-                                                }}
+                                                onClick={() => window.redriveWidget?.open()}
                                             >
                                                 <MessageCircle className="w-5 h-5" />
                                                 Falar com Consultor Especialista

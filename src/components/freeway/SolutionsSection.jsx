@@ -47,8 +47,11 @@ export default function SolutionsSection() {
         orange: 'bg-orange-100 text-orange-700'
     };
 
-    const openChat = (serviceName) => {
-        window.open(`https://api.whatsapp.com/send?phone=556730253131&text=Olá! Tenho interesse no serviço ${serviceName}. Gostaria de mais informações.`, '_blank');
+    const openChat = () => {
+        // Open Redrive chat widget
+        if (window.redriveWidget) {
+            window.redriveWidget.open();
+        }
     };
 
     return (
@@ -111,7 +114,7 @@ export default function SolutionsSection() {
                                         <Button 
                                             variant="ghost" 
                                             className="text-gray-600 hover:text-orange-500 group/btn"
-                                            onClick={() => openChat(solution.title)}
+                                            onClick={openChat}
                                         >
                                             Saiba mais
                                             <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
