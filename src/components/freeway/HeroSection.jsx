@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Zap, Globe } from 'lucide-react';
 import { motion } from 'framer-motion';
+import mapaMS from '@/assets/mapa-ms.png';
 
 export default function HeroSection() {
     const openChat = () => {
@@ -83,52 +84,14 @@ export default function HeroSection() {
                         className="relative hidden lg:block"
                     >
                         <div className="relative">
-                            {/* Main Card */}
-                            <div className="bg-white rounded-3xl shadow-2xl p-8 relative z-10">
-                                <div className="aspect-square bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl flex items-center justify-center overflow-hidden">
-                                    {/* Network Animation */}
-                                    <div className="relative w-full h-full p-12">
-                                        <svg viewBox="0 0 200 200" className="w-full h-full">
-                                            {/* Connection Lines */}
-                                            <motion.path
-                                                d="M100 20 L100 100 M100 100 L180 100 M100 100 L20 100 M100 100 L100 180"
-                                                stroke="url(#gradient)"
-                                                strokeWidth="2"
-                                                fill="none"
-                                                initial={{ pathLength: 0 }}
-                                                animate={{ pathLength: 1 }}
-                                                transition={{ duration: 2, repeat: Infinity }}
-                                            />
-                                            <motion.path
-                                                d="M100 100 L160 40 M100 100 L40 40 M100 100 L160 160 M100 100 L40 160"
-                                                stroke="url(#gradient)"
-                                                strokeWidth="2"
-                                                fill="none"
-                                                initial={{ pathLength: 0 }}
-                                                animate={{ pathLength: 1 }}
-                                                transition={{ duration: 2, delay: 0.5, repeat: Infinity }}
-                                            />
-                                            <defs>
-                                                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                                    <stop offset="0%" stopColor="#f97316" />
-                                                    <stop offset="100%" stopColor="#ea580c" />
-                                                </linearGradient>
-                                            </defs>
-                                            {/* Nodes */}
-                                            {[[100, 100], [100, 20], [180, 100], [20, 100], [100, 180], [160, 40], [40, 40], [160, 160], [40, 160]].map(([x, y], i) => (
-                                                <motion.circle
-                                                    key={i}
-                                                    cx={x}
-                                                    cy={y}
-                                                    r={i === 0 ? 12 : 6}
-                                                    fill={i === 0 ? '#f97316' : '#6b7280'}
-                                                    initial={{ scale: 0 }}
-                                                    animate={{ scale: 1 }}
-                                                    transition={{ delay: i * 0.1 }}
-                                                />
-                                            ))}
-                                        </svg>
-                                    </div>
+                            {/* Main Card - Mapa MS */}
+                            <div className="bg-white rounded-3xl shadow-2xl p-6 relative z-10">
+                                <div className="relative">
+                                    <img 
+                                        src={mapaMS} 
+                                        alt="Mapa de cobertura Freeway - Cidades atendidas no Mato Grosso do Sul" 
+                                        className="w-full h-auto rounded-2xl"
+                                    />
                                 </div>
                             </div>
 
