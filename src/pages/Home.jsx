@@ -3,6 +3,7 @@ import Header from '@/components/freeway/Header';
 import HeroSection from '@/components/freeway/HeroSection';
 import InfrastructureSection from '@/components/freeway/InfrastructureSection';
 import PlansSection from '@/components/freeway/PlansSection';
+import MobilePlansSection from '@/components/freeway/MobilePlansSection';
 import SolutionsSection from '@/components/freeway/SolutionsSection';
 import SolutionsCalculator from '@/components/freeway/SolutionsCalculator';
 import InstitutionalSection from '@/components/freeway/InstitutionalSection';
@@ -22,6 +23,7 @@ export default function Home() {
                 <HeroSection />
                 <InfrastructureSection />
                 <PlansSection />
+                <MobilePlansSection />
                 <SolutionsSection />
                 <SolutionsCalculator />
                 <InstitutionalSection />
