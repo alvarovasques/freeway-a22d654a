@@ -4,14 +4,7 @@ import { ArrowRight, Shield, Zap, Globe } from 'lucide-react';
 import { motion } from 'framer-motion';
 import mapaMS from '@/assets/mapa-ms.png';
 
-export default function HeroSection() {
-    const openChat = () => {
-        // Open Redrive chat widget
-        if (window.redriveWidget) {
-            window.redriveWidget.open();
-        }
-    };
-
+export default function HeroSection({ onContactClick }) {
     return (
         <section className="relative min-h-[70vh] flex items-center overflow-hidden bg-gradient-to-br from-gray-50 via-white to-orange-50" aria-label="Internet Empresarial Campo Grande MS - Fibra Óptica Corporativa">
             {/* Background Pattern */}
@@ -53,7 +46,7 @@ export default function HeroSection() {
                             <Button 
                                 size="lg" 
                                 className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white shadow-xl shadow-orange-500/30 text-lg px-8 py-6"
-                                onClick={openChat}
+                                onClick={onContactClick}
                             >
                                 Falar com Consultor Especialista
                                 <ArrowRight className="ml-2 w-5 h-5" />

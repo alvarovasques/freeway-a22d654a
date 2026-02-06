@@ -4,7 +4,7 @@ import { Link2, PhoneCall, Building2, ArrowRight, Cpu } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
-export default function SolutionsSection() {
+export default function SolutionsSection({ onContactClick }) {
     const solutions = [
         {
             icon: Link2,
@@ -45,13 +45,6 @@ export default function SolutionsSection() {
         green: 'bg-green-100 text-green-700',
         purple: 'bg-purple-100 text-purple-700',
         orange: 'bg-orange-100 text-orange-700'
-    };
-
-    const openChat = () => {
-        // Open Redrive chat widget
-        if (window.redriveWidget) {
-            window.redriveWidget.open();
-        }
     };
 
     return (
@@ -114,7 +107,7 @@ export default function SolutionsSection() {
                                         <Button 
                                             variant="ghost" 
                                             className="text-gray-600 hover:text-orange-500 group/btn"
-                                            onClick={openChat}
+                                            onClick={onContactClick}
                                         >
                                             Saiba mais
                                             <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
