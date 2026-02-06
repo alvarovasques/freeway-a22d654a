@@ -19,6 +19,7 @@ export default function Header({ onContactClick }) {
         { label: 'Infraestrutura', href: '#infraestrutura' },
         { label: 'Planos', href: '#planos' },
         { label: 'Soluções', href: '#solucoes' },
+        { label: 'Mega Link', href: '/MegaLink', isRoute: true },
         { label: 'Condomínios', href: '/Condominios', isRoute: true },
         { label: 'FAQ', href: '#faq' },
         { label: 'Contato', href: '#contato' },

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Link2, PhoneCall, Building2, ArrowRight, Cpu } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -13,7 +14,8 @@ export default function SolutionsSection({ onContactClick }) {
             price: 'A partir de R$ 300,00/mês',
             priceNote: '(mesmo município)',
             features: ['Conexão dedicada', 'Alta segurança', 'Baixa latência'],
-            color: 'blue'
+            color: 'blue',
+            link: '/MegaLink'
         },
         {
             icon: PhoneCall,
@@ -29,7 +31,8 @@ export default function SolutionsSection({ onContactClick }) {
             description: 'Infraestrutura FTTH unificada, Wi-Fi inteligente para áreas comuns e segurança avançada.',
             price: 'Sob consulta',
             features: ['FTTH unificado', 'Wi-Fi áreas comuns', 'Segurança'],
-            color: 'orange'
+            color: 'orange',
+            link: '/Condominios'
         }
     ];
 
@@ -104,14 +107,27 @@ export default function SolutionsSection({ onContactClick }) {
                                                 <p className="text-sm text-gray-500">{solution.priceNote}</p>
                                             )}
                                         </div>
-                                        <Button 
-                                            variant="ghost" 
-                                            className="text-gray-600 hover:text-orange-500 group/btn"
-                                            onClick={onContactClick}
-                                        >
-                                            Saiba mais
-                                            <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                                        </Button>
+                                        {solution.link ? (
+                                            <Button 
+                                                variant="ghost" 
+                                                className="text-gray-600 hover:text-orange-500 group/btn"
+                                                asChild
+                                            >
+                                                <Link to={solution.link}>
+                                                    Saiba mais
+                                                    <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                                                </Link>
+                                            </Button>
+                                        ) : (
+                                            <Button 
+                                                variant="ghost" 
+                                                className="text-gray-600 hover:text-orange-500 group/btn"
+                                                onClick={onContactClick}
+                                            >
+                                                Saiba mais
+                                                <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                                            </Button>
+                                        )}
                                     </div>
                                 </div>
                             </div>
