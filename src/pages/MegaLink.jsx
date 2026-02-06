@@ -40,7 +40,7 @@ function Header({ onContactClick }) {
             <div className="bg-gray-900 text-white py-2 hidden md:block">
                 <div className="max-w-7xl mx-auto px-6 flex justify-between items-center text-sm">
                     <div className="flex items-center gap-6">
-                        <a href="https://api.whatsapp.com/send?phone=556730253131" className="flex items-center gap-2 hover:text-blue-400 transition-colors">
+                        <a href="https://api.whatsapp.com/send?phone=556730253131" className="flex items-center gap-2 hover:text-orange-400 transition-colors">
                             <Phone className="w-4 h-4" />
                             <span>WhatsApp - (67) 3025-3131</span>
                         </a>
@@ -57,7 +57,7 @@ function Header({ onContactClick }) {
             </div>
 
             {/* Main Header */}
-            <header className={`sticky top-0 z-50 transition-all duration-300 bg-gradient-to-r from-blue-600 to-blue-700 ${isScrolled ? 'shadow-lg' : ''}`}>
+            <header className={`sticky top-0 z-50 transition-all duration-300 bg-gradient-to-r from-orange-500 to-orange-600 ${isScrolled ? 'shadow-lg' : ''}`}>
                 <div className="max-w-7xl mx-auto px-6 py-3">
                     <div className="flex items-center justify-between">
                         {/* Logo */}
@@ -96,7 +96,7 @@ function Header({ onContactClick }) {
 
                         {/* CTA Button */}
                         <div className="hidden lg:flex items-center gap-3">
-                            <Button className="bg-white text-blue-600 hover:bg-gray-100 shadow-lg" onClick={onContactClick}>
+                            <Button className="bg-white text-orange-600 hover:bg-gray-100 shadow-lg" onClick={onContactClick}>
                                 Solicitar Estudo de Viabilidade
                             </Button>
                         </div>
@@ -118,7 +118,7 @@ function Header({ onContactClick }) {
                             initial={{ opacity: 0, height: 0 }}
                             animate={{ opacity: 1, height: 'auto' }}
                             exit={{ opacity: 0, height: 0 }}
-                            className="lg:hidden bg-blue-700 border-t border-blue-500/30"
+                            className="lg:hidden bg-orange-600 border-t border-orange-400/30"
                         >
                             <div className="px-6 py-4 space-y-4">
                                 {navItems.map((item) => (
@@ -142,8 +142,8 @@ function Header({ onContactClick }) {
                                         </a>
                                     )
                                 ))}
-                                <div className="pt-4 border-t border-blue-500/30">
-                                    <Button className="w-full bg-white text-blue-600 hover:bg-gray-100" onClick={onContactClick}>
+                                <div className="pt-4 border-t border-orange-400/30">
+                                    <Button className="w-full bg-white text-orange-600 hover:bg-gray-100" onClick={onContactClick}>
                                         Solicitar Estudo
                                     </Button>
                                 </div>
@@ -159,19 +159,19 @@ function Header({ onContactClick }) {
 // Hero Section
 function HeroSection({ onContactClick }) {
     return (
-        <section className="relative min-h-[70vh] flex items-center overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
+        <section className="relative min-h-[70vh] flex items-center overflow-hidden bg-gradient-to-br from-gray-900 via-orange-900 to-gray-900">
             {/* Network Animation Background */}
             <div className="absolute inset-0 overflow-hidden">
-                <div className="absolute top-20 right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
-                <div className="absolute bottom-20 left-20 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl" />
+                <div className="absolute top-20 right-20 w-96 h-96 bg-orange-500/20 rounded-full blur-3xl" />
+                <div className="absolute bottom-20 left-20 w-96 h-96 bg-orange-600/10 rounded-full blur-3xl" />
                 
                 {/* Network Lines */}
                 <svg className="absolute inset-0 w-full h-full opacity-20">
                     <defs>
                         <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%" stopColor="#3b82f6" stopOpacity="0" />
-                            <stop offset="50%" stopColor="#3b82f6" stopOpacity="1" />
-                            <stop offset="100%" stopColor="#3b82f6" stopOpacity="0" />
+                            <stop offset="0%" stopColor="#f97316" stopOpacity="0" />
+                            <stop offset="50%" stopColor="#f97316" stopOpacity="1" />
+                            <stop offset="100%" stopColor="#f97316" stopOpacity="0" />
                         </linearGradient>
                     </defs>
                     {/* Animated connection lines */}
@@ -201,8 +201,8 @@ function HeroSection({ onContactClick }) {
                         transition={{ delay: i * 0.2, duration: 0.5 }}
                     >
                         <div className="relative">
-                            <div className="w-4 h-4 bg-blue-500 rounded-full animate-pulse" />
-                            <div className="absolute -inset-2 bg-blue-500/30 rounded-full animate-ping" />
+                            <div className="w-4 h-4 bg-orange-500 rounded-full animate-pulse" />
+                            <div className="absolute -inset-2 bg-orange-500/30 rounded-full animate-ping" />
                         </div>
                     </motion.div>
                 ))}
@@ -215,14 +215,14 @@ function HeroSection({ onContactClick }) {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <Badge className="bg-blue-500/20 text-blue-300 border-blue-500/30 mb-6">
+                        <Badge className="bg-orange-500/20 text-orange-300 border-orange-500/30 mb-6">
                             <Link2 className="w-4 h-4 mr-2" />
                             Rede Privada Dedicada
                         </Badge>
                         
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-6">
                             Conecte suas filiais com{' '}
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400">
                                 velocidade e sigilo
                             </span>{' '}
                             de uma rede 100% dedicada
@@ -230,12 +230,12 @@ function HeroSection({ onContactClick }) {
                         
                         <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                             O <strong className="text-white">Mega Link Freeway</strong> oferece interligação Ponto a Ponto (LAN to LAN) 
-                            totalmente independente da internet, garantindo <strong className="text-blue-400">sigilo absoluto</strong> e 
+                            totalmente independente da internet, garantindo <strong className="text-orange-400">sigilo absoluto</strong> e 
                             proteção contra ameaças externas.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4">
-                            <Button size="lg" className="bg-blue-500 hover:bg-blue-600 text-white shadow-xl shadow-blue-500/30" onClick={onContactClick}>
+                            <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white shadow-xl shadow-orange-500/30" onClick={onContactClick}>
                                 Solicitar Estudo de Viabilidade
                                 <ArrowRight className="ml-2 w-5 h-5" />
                             </Button>
@@ -250,11 +250,11 @@ function HeroSection({ onContactClick }) {
                     >
                         <div className="relative">
                             {/* Network Diagram */}
-                            <div className="bg-gray-800/50 backdrop-blur-sm rounded-3xl p-8 border border-blue-500/20">
+                            <div className="bg-gray-800/50 backdrop-blur-sm rounded-3xl p-8 border border-orange-500/20">
                                 <div className="grid grid-cols-3 gap-4">
                                     {/* Central Hub */}
                                     <div className="col-span-3 flex justify-center mb-4">
-                                        <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl p-6 text-center shadow-xl">
+                                        <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl p-6 text-center shadow-xl">
                                             <Building2 className="w-12 h-12 text-white mx-auto mb-2" />
                                             <span className="text-white font-bold">MATRIZ</span>
                                         </div>
@@ -262,7 +262,7 @@ function HeroSection({ onContactClick }) {
                                     
                                     {/* Connection Lines */}
                                     <div className="col-span-3 flex justify-center">
-                                        <div className="h-12 w-px bg-gradient-to-b from-blue-500 to-blue-500/30" />
+                                        <div className="h-12 w-px bg-gradient-to-b from-orange-500 to-orange-500/30" />
                                     </div>
                                     
                                     {/* Branches */}
@@ -272,9 +272,9 @@ function HeroSection({ onContactClick }) {
                                             initial={{ opacity: 0, y: 20 }}
                                             animate={{ opacity: 1, y: 0 }}
                                             transition={{ delay: 0.5 + i * 0.2 }}
-                                            className="bg-gray-700/50 rounded-xl p-4 text-center border border-blue-500/30"
+                                            className="bg-gray-700/50 rounded-xl p-4 text-center border border-orange-500/30"
                                         >
-                                            <Server className="w-8 h-8 text-blue-400 mx-auto mb-2" />
+                                            <Server className="w-8 h-8 text-orange-400 mx-auto mb-2" />
                                             <span className="text-gray-300 text-sm font-medium">{name}</span>
                                         </motion.div>
                                     ))}
@@ -282,7 +282,7 @@ function HeroSection({ onContactClick }) {
                                 
                                 <div className="mt-6 flex items-center justify-center gap-4 text-sm text-gray-400">
                                     <div className="flex items-center gap-2">
-                                        <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse" />
+                                        <div className="w-3 h-3 bg-orange-500 rounded-full animate-pulse" />
                                         <span>Conexão Ativa</span>
                                     </div>
                                     <div className="flex items-center gap-2">
@@ -337,13 +337,13 @@ function DiferenciaisSection() {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <Badge className="bg-blue-100 text-blue-700 mb-6">
+                    <Badge className="bg-orange-100 text-orange-700 mb-6">
                         <Zap className="w-4 h-4 mr-2" />
                         Diferenciais Exclusivos
                     </Badge>
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 mb-6">
                         Diferenciais que{' '}
-                        <span className="text-blue-600">impulsionam negócios</span>
+                        <span className="text-orange-500">impulsionam negócios</span>
                     </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                         O Mega Link é a solução para empresas que não podem depender da instabilidade da internet pública para seus sistemas internos.
@@ -362,13 +362,13 @@ function DiferenciaisSection() {
                             <Card className="h-full border-0 shadow-lg hover:shadow-xl transition-shadow bg-gradient-to-br from-gray-50 to-white">
                                 <CardContent className="p-8">
                                     <div className="flex items-start gap-6">
-                                        <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg shadow-blue-500/30 flex-shrink-0">
+                                        <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center shadow-lg shadow-orange-500/30 flex-shrink-0">
                                             <item.icon className="w-8 h-8 text-white" />
                                         </div>
                                         <div className="flex-1">
                                             <div className="flex items-center gap-3 mb-2">
                                                 <h3 className="text-xl font-bold text-gray-900">{item.title}</h3>
-                                                <Badge variant="secondary" className="bg-blue-100 text-blue-700">
+                                                <Badge variant="secondary" className="bg-orange-100 text-orange-700">
                                                     {item.highlight}
                                                 </Badge>
                                             </div>
@@ -414,13 +414,13 @@ function EspecificacoesSection() {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <Badge className="bg-blue-500/20 text-blue-300 border-blue-500/30 mb-6">
+                    <Badge className="bg-orange-500/20 text-orange-300 border-orange-500/30 mb-6">
                         <Cpu className="w-4 h-4 mr-2" />
                         Para o Time de TI
                     </Badge>
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-6">
                         Especificações{' '}
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">técnicas</span>
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400">técnicas</span>
                     </h2>
                     <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                         Infraestrutura de nível carrier, projetada para integrar-se perfeitamente ao seu ambiente de rede existente.
@@ -435,9 +435,9 @@ function EspecificacoesSection() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 hover:border-blue-500/50 transition-colors"
+                            className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 hover:border-orange-500/50 transition-colors"
                         >
-                            <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6">
+                            <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-6">
                                 <spec.icon className="w-7 h-7 text-white" />
                             </div>
                             <h3 className="text-xl font-bold text-white mb-3">{spec.title}</h3>
@@ -485,7 +485,7 @@ function PlanosSection({ onContactClick }) {
     ];
 
     return (
-        <section id="planos" className="py-24 bg-gradient-to-br from-gray-50 to-blue-50">
+        <section id="planos" className="py-24 bg-gradient-to-br from-gray-50 to-orange-50">
             <div className="max-w-7xl mx-auto px-6">
                 <motion.div 
                     initial={{ opacity: 0, y: 20 }}
@@ -493,13 +493,13 @@ function PlanosSection({ onContactClick }) {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <Badge className="bg-blue-100 text-blue-700 mb-6">
+                    <Badge className="bg-orange-100 text-orange-700 mb-6">
                         <DollarSign className="w-4 h-4 mr-2" />
                         Investimento Acessível
                     </Badge>
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 mb-6">
                         Planos e{' '}
-                        <span className="text-blue-600">investimento</span>
+                        <span className="text-orange-500">investimento</span>
                     </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                         Conectividade estratégica com valores que cabem no orçamento da sua empresa. Velocidades escalam até 2 Giga sob consulta.
@@ -514,10 +514,10 @@ function PlanosSection({ onContactClick }) {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className={`relative rounded-3xl overflow-hidden ${plano.highlight ? 'ring-2 ring-blue-500' : ''}`}
+                            className={`relative rounded-3xl overflow-hidden ${plano.highlight ? 'ring-2 ring-orange-500' : ''}`}
                         >
                             {plano.highlight && (
-                                <div className="absolute top-0 left-0 right-0 bg-blue-500 text-white text-center text-sm font-semibold py-2">
+                                <div className="absolute top-0 left-0 right-0 bg-orange-500 text-white text-center text-sm font-semibold py-2">
                                     Mais Popular
                                 </div>
                             )}
@@ -537,14 +537,14 @@ function PlanosSection({ onContactClick }) {
                                             <span className="text-5xl font-black text-gray-900">{plano.price}</span>
                                             <span className="text-gray-500">/mês</span>
                                         </div>
-                                        <p className="text-blue-600 font-semibold mt-2">{plano.speed}</p>
+                                        <p className="text-orange-500 font-semibold mt-2">{plano.speed}</p>
                                     </div>
 
                                     <ul className="space-y-3 mb-8">
                                         {plano.features.map((feature, i) => (
                                             <li key={i} className="flex items-center gap-3">
-                                                <div className="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                                                    <Check className="w-3 h-3 text-blue-600" />
+                                                <div className="w-5 h-5 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                                    <Check className="w-3 h-3 text-orange-600" />
                                                 </div>
                                                 <span className="text-gray-600">{feature}</span>
                                             </li>
@@ -552,7 +552,7 @@ function PlanosSection({ onContactClick }) {
                                     </ul>
 
                                     <Button 
-                                        className={`w-full ${plano.highlight ? 'bg-blue-600 hover:bg-blue-700' : 'bg-gray-900 hover:bg-gray-800'}`}
+                                        className={`w-full ${plano.highlight ? 'bg-orange-500 hover:bg-orange-600' : 'bg-gray-900 hover:bg-gray-800'}`}
                                         onClick={onContactClick}
                                     >
                                         Solicitar Proposta
@@ -606,13 +606,13 @@ function SuporteSection() {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <Badge className="bg-blue-100 text-blue-700 mb-6">
+                    <Badge className="bg-orange-100 text-orange-700 mb-6">
                         <Headphones className="w-4 h-4 mr-2" />
                         Suporte Elite
                     </Badge>
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 mb-6">
                         Suporte e{' '}
-                        <span className="text-blue-600">operação Freeway</span>
+                        <span className="text-orange-500">operação Freeway</span>
                     </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                         Você foca no seu negócio. Nós cuidamos da sua conectividade com excelência operacional.
@@ -629,7 +629,7 @@ function SuporteSection() {
                             transition={{ delay: index * 0.1 }}
                             className="text-center"
                         >
-                            <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-blue-500/30">
+                            <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-orange-500/30">
                                 <item.icon className="w-10 h-10 text-white" />
                             </div>
                             <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
@@ -661,7 +661,7 @@ function Footer({ onContactClick }) {
                         </p>
 
                         <div className="space-y-3">
-                            <a href="https://api.whatsapp.com/send?phone=556730253131" className="flex items-center gap-3 text-gray-400 hover:text-blue-400 transition-colors">
+                            <a href="https://api.whatsapp.com/send?phone=556730253131" className="flex items-center gap-3 text-gray-400 hover:text-orange-400 transition-colors">
                                 <Phone className="w-5 h-5" />
                                 <span>(67) 3025-3131</span>
                             </a>
@@ -676,11 +676,11 @@ function Footer({ onContactClick }) {
                     <div>
                         <h4 className="font-bold text-white mb-4">Navegação</h4>
                         <ul className="space-y-3">
-                            <li><a href="#diferenciais" className="text-gray-400 hover:text-blue-400 transition-colors">Diferenciais</a></li>
-                            <li><a href="#especificacoes" className="text-gray-400 hover:text-blue-400 transition-colors">Especificações</a></li>
-                            <li><a href="#planos" className="text-gray-400 hover:text-blue-400 transition-colors">Planos</a></li>
-                            <li><a href="#suporte" className="text-gray-400 hover:text-blue-400 transition-colors">Suporte</a></li>
-                            <li><Link to="/" className="text-gray-400 hover:text-blue-400 transition-colors">Site Principal</Link></li>
+                            <li><a href="#diferenciais" className="text-gray-400 hover:text-orange-400 transition-colors">Diferenciais</a></li>
+                            <li><a href="#especificacoes" className="text-gray-400 hover:text-orange-400 transition-colors">Especificações</a></li>
+                            <li><a href="#planos" className="text-gray-400 hover:text-orange-400 transition-colors">Planos</a></li>
+                            <li><a href="#suporte" className="text-gray-400 hover:text-orange-400 transition-colors">Suporte</a></li>
+                            <li><Link to="/" className="text-gray-400 hover:text-orange-400 transition-colors">Site Principal</Link></li>
                         </ul>
                     </div>
 
@@ -713,7 +713,7 @@ function Footer({ onContactClick }) {
                             'Suporte 24/7'
                         ].map((badge, i) => (
                             <div key={i} className="flex items-center gap-2 bg-gray-800 px-4 py-2 rounded-full">
-                                <div className="w-2 h-2 bg-blue-500 rounded-full" />
+                                <div className="w-2 h-2 bg-orange-500 rounded-full" />
                                 <span className="text-sm text-gray-300">{badge}</span>
                             </div>
                         ))}
