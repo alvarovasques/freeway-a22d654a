@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Phone, MapPin, Clock, Menu, X } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from 'framer-motion';
@@ -18,6 +19,7 @@ export default function Header({ onContactClick }) {
         { label: 'Infraestrutura', href: '#infraestrutura' },
         { label: 'Planos', href: '#planos' },
         { label: 'Soluções', href: '#solucoes' },
+        { label: 'Condomínios', href: '/Condominios', isRoute: true },
         { label: 'FAQ', href: '#faq' },
         { label: 'Contato', href: '#contato' },
     ];
@@ -60,14 +62,25 @@ export default function Header({ onContactClick }) {
                         {/* Desktop Navigation */}
                         <nav className="hidden lg:flex items-center gap-8">
                             {navItems.map((item) => (
-                                <a 
-                                    key={item.label}
-                                    href={item.href}
-                                    className="text-white/90 hover:text-white font-medium transition-colors relative group"
-                                >
-                                    {item.label}
-                                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all group-hover:w-full" />
-                                </a>
+                                item.isRoute ? (
+                                    <Link 
+                                        key={item.label}
+                                        to={item.href}
+                                        className="text-white/90 hover:text-white font-medium transition-colors relative group"
+                                    >
+                                        {item.label}
+                                        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all group-hover:w-full" />
+                                    </Link>
+                                ) : (
+                                    <a 
+                                        key={item.label}
+                                        href={item.href}
+                                        className="text-white/90 hover:text-white font-medium transition-colors relative group"
+                                    >
+                                        {item.label}
+                                        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all group-hover:w-full" />
+                                    </a>
+                                )
                             ))}
                         </nav>
 
@@ -104,14 +117,25 @@ export default function Header({ onContactClick }) {
                         >
                             <div className="px-6 py-4 space-y-4">
                                 {navItems.map((item) => (
-                                    <a 
-                                        key={item.label}
-                                        href={item.href}
-                                        className="block text-white/90 hover:text-white font-medium py-2"
-                                        onClick={() => setMobileMenuOpen(false)}
-                                    >
-                                        {item.label}
-                                    </a>
+                                    item.isRoute ? (
+                                        <Link 
+                                            key={item.label}
+                                            to={item.href}
+                                            className="block text-white/90 hover:text-white font-medium py-2"
+                                            onClick={() => setMobileMenuOpen(false)}
+                                        >
+                                            {item.label}
+                                        </Link>
+                                    ) : (
+                                        <a 
+                                            key={item.label}
+                                            href={item.href}
+                                            className="block text-white/90 hover:text-white font-medium py-2"
+                                            onClick={() => setMobileMenuOpen(false)}
+                                        >
+                                            {item.label}
+                                        </a>
+                                    )
                                 ))}
                                 <div className="pt-4 space-y-3 border-t border-orange-400/30">
                                     <Button variant="outline" className="w-full border-white/30 text-white hover:bg-white/10 bg-transparent" asChild>
