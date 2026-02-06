@@ -72,12 +72,12 @@ export default function ContactModal({ open, onOpenChange }) {
                                 <Button 
                                     className="w-full bg-green-600 hover:bg-green-700 text-white"
                                     onClick={() => {
-                                        window.open('https://wa.me/5567999999999', '_blank');
+                                        window.open('https://wa.me/556740423345', '_blank');
                                         onOpenChange(false);
                                     }}
                                 >
                                     <MessageCircle className="w-4 h-4 mr-2" />
-                                    WhatsApp: (67) 99999-9999
+                                    WhatsApp
                                 </Button>
                             </div>
                         )}
