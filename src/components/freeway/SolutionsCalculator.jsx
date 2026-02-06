@@ -9,7 +9,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
-export default function SolutionsCalculator() {
+export default function SolutionsCalculator({ onContactClick }) {
     const [step, setStep] = useState(1);
     const [formData, setFormData] = useState({
         companyType: '',
@@ -464,7 +464,7 @@ export default function SolutionsCalculator() {
                                             <Button 
                                                 size="lg" 
                                                 className="bg-orange-500 hover:bg-orange-600 text-white whitespace-nowrap gap-2"
-                                                onClick={() => window.redriveWidget?.open()}
+                                                onClick={onContactClick}
                                             >
                                                 <MessageCircle className="w-5 h-5" />
                                                 Falar com Consultor Especialista

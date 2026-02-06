@@ -1,7 +1,7 @@
 import React from 'react';
 import { Phone, MapPin, Clock, Mail, Facebook, Instagram, Youtube, Linkedin, ExternalLink } from 'lucide-react';
 
-export default function Footer() {
+export default function Footer({ onContactClick }) {
     const links = {
         produtos: [
             { label: 'Speedway Light', href: '#planos' },
@@ -43,7 +43,7 @@ export default function Footer() {
                         </p>
 
                         <div className="space-y-3">
-                            <button onClick={() => window.redriveWidget?.open()} className="flex items-center gap-3 text-gray-400 hover:text-orange-400 transition-colors">
+                            <button onClick={onContactClick} className="flex items-center gap-3 text-gray-400 hover:text-orange-400 transition-colors">
                                 <Phone className="w-5 h-5" />
                                 <span>(67) 3025-3131</span>
                             </button>
@@ -110,7 +110,7 @@ export default function Footer() {
                                 <li key={i}>
                                     {link.openChat ? (
                                         <button 
-                                            onClick={() => window.redriveWidget?.open()} 
+                                            onClick={onContactClick} 
                                             className="text-gray-400 hover:text-orange-400 transition-colors flex items-center gap-1"
                                         >
                                             {link.label}

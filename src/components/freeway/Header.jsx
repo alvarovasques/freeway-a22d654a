@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from 'framer-motion';
 import logo from '@/assets/logo.png';
 
-export default function Header() {
+export default function Header({ onContactClick }) {
     const [isScrolled, setIsScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -22,13 +22,6 @@ export default function Header() {
         { label: 'FAQ', href: '#faq' },
         { label: 'Contato', href: '#contato' },
     ];
-
-    const openChat = () => {
-        // Open Redrive chat widget
-        if (window.redriveWidget) {
-            window.redriveWidget.open();
-        }
-    };
 
     return (
         <>
@@ -86,7 +79,7 @@ export default function Header() {
                                     Área do Cliente
                                 </a>
                             </Button>
-                            <Button className="bg-white text-orange-600 hover:bg-gray-100 shadow-lg" onClick={openChat}>
+                            <Button className="bg-white text-orange-600 hover:bg-gray-100 shadow-lg" onClick={onContactClick}>
                                 Falar com Consultor
                             </Button>
                         </div>
@@ -127,7 +120,7 @@ export default function Header() {
                                             Área do Cliente
                                         </a>
                                     </Button>
-                                    <Button className="w-full bg-white text-orange-600 hover:bg-gray-100" onClick={openChat}>Falar com Consultor</Button>
+                                    <Button className="w-full bg-white text-orange-600 hover:bg-gray-100" onClick={onContactClick}>Falar com Consultor</Button>
                                 </div>
                             </div>
                         </motion.div>

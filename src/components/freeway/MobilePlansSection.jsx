@@ -4,15 +4,8 @@ import { Check, Star, Smartphone, Radio, Cpu, ArrowRight, Signal, Wifi } from 'l
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
-export default function MobilePlansSection() {
+export default function MobilePlansSection({ onContactClick }) {
     const [activeTab, setActiveTab] = useState('mobile');
-
-    const openChat = () => {
-        // Open Redrive chat widget
-        if (window.redriveWidget) {
-            window.redriveWidget.open();
-        }
-    };
 
     const mobilePlans = [
         {
@@ -238,7 +231,7 @@ export default function MobilePlansSection() {
                                         ? 'bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white shadow-lg shadow-orange-500/30' 
                                         : 'bg-gray-900 hover:bg-gray-800 text-white'
                                 }`}
-                                onClick={() => openChat(plan.name)}
+                                onClick={onContactClick}
                             >
                                 {plan.cta}
                                 <ArrowRight className="ml-2 w-5 h-5" />

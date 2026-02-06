@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Button } from "@/components/ui/button";
 import { MessageCircle } from 'lucide-react';
 
-export default function CTASection() {
+export default function CTASection({ onContactClick }) {
     return (
         <section className="py-24 bg-gradient-to-br from-orange-500 to-orange-600 relative overflow-hidden">
             {/* Background Pattern */}
@@ -30,7 +30,7 @@ export default function CTASection() {
                         <Button 
                             size="lg" 
                             className="bg-gray-900 text-white hover:bg-gray-800 shadow-2xl text-lg px-10 py-7 font-bold"
-                            onClick={() => window.redriveWidget?.open()}
+                            onClick={onContactClick}
                         >
                             <MessageCircle className="mr-3 w-6 h-6" />
                             Falar com Consultor Especialista
