@@ -72,7 +72,7 @@ export default function ContactModal({ open, onOpenChange }) {
                                 <Button 
                                     className="w-full bg-green-600 hover:bg-green-700 text-white"
                                     onClick={() => {
-                                        window.open('https://wa.me/556740423345', '_blank');
+                                        window.open('https://web.whatsapp.com/send?phone=556740423345', '_blank');
                                         onOpenChange(false);
                                     }}
                                 >
