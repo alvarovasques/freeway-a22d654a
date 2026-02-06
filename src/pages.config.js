@@ -49,11 +49,13 @@
  */
 import Home from './pages/Home';
 import Condominios from './pages/Condominios';
+import MegaLink from './pages/MegaLink';
 
 
 export const PAGES = {
     "Home": Home,
     "Condominios": Condominios,
+    "MegaLink": MegaLink,
 }
 
 export const pagesConfig = {

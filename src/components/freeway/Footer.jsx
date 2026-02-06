@@ -8,7 +8,7 @@ export default function Footer({ onContactClick }) {
             { label: 'Speedway Light', href: '#planos' },
             { label: 'Speedway Empresarial', href: '#planos' },
             { label: 'Speedway Full', href: '#planos' },
-            { label: 'Megalink', href: '#solucoes' },
+            { label: 'Mega Link', href: '/MegaLink', isRoute: true },
             { label: 'PABX Virtual', href: '#solucoes' },
         ],
         empresa: [
@@ -84,9 +84,18 @@ export default function Footer({ onContactClick }) {
                         <ul className="space-y-3">
                             {links.produtos.map((link, i) => (
                                 <li key={i}>
-                                    <a href={link.href} className="text-gray-400 hover:text-orange-400 transition-colors">
-                                        {link.label}
-                                    </a>
+                                    {link.isRoute ? (
+                                        <Link 
+                                            to={link.href} 
+                                            className="text-gray-400 hover:text-orange-400 transition-colors flex items-center gap-1"
+                                        >
+                                            {link.label}
+                                        </Link>
+                                    ) : (
+                                        <a href={link.href} className="text-gray-400 hover:text-orange-400 transition-colors">
+                                            {link.label}
+                                        </a>
+                                    )}
                                 </li>
                             ))}
                         </ul>
