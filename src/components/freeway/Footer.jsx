@@ -17,9 +17,9 @@ export default function Footer() {
             { label: 'Trabalhe Conosco', href: '#' },
         ],
         suporte: [
-            { label: 'Área do Cliente', href: '#' },
-            { label: 'Central de Ajuda', href: '#' },
-            { label: 'Suporte Técnico', href: '#' },
+            { label: 'Área do Cliente', href: 'https://sistema.freewaynet.com.br/central_assinante_web/login', external: true },
+            { label: 'Central de Ajuda', href: '#', openChat: true },
+            { label: 'Suporte Técnico', href: '#', openChat: true },
             { label: 'Status da Rede', href: '#' },
         ]
     };
@@ -108,10 +108,24 @@ export default function Footer() {
                         <ul className="space-y-3">
                             {links.suporte.map((link, i) => (
                                 <li key={i}>
-                                    <a href={link.href} className="text-gray-400 hover:text-orange-400 transition-colors flex items-center gap-1">
-                                        {link.label}
-                                        {link.label === 'Área do Cliente' && <ExternalLink className="w-3 h-3" />}
-                                    </a>
+                                    {link.openChat ? (
+                                        <button 
+                                            onClick={() => window.redriveWidget?.open()} 
+                                            className="text-gray-400 hover:text-orange-400 transition-colors flex items-center gap-1"
+                                        >
+                                            {link.label}
+                                        </button>
+                                    ) : (
+                                        <a 
+                                            href={link.href} 
+                                            target={link.external ? "_blank" : undefined}
+                                            rel={link.external ? "noopener noreferrer" : undefined}
+                                            className="text-gray-400 hover:text-orange-400 transition-colors flex items-center gap-1"
+                                        >
+                                            {link.label}
+                                            {link.external && <ExternalLink className="w-3 h-3" />}
+                                        </a>
+                                    )}
                                 </li>
                             ))}
                         </ul>

@@ -58,8 +58,10 @@ export default function HeroSection() {
                                 Falar com Consultor Especialista
                                 <ArrowRight className="ml-2 w-5 h-5" />
                             </Button>
-                            <Button size="lg" variant="outline" className="border-2 border-gray-300 text-gray-700 hover:bg-gray-50 text-lg px-8 py-6">
-                                Área do Cliente
+                            <Button size="lg" variant="outline" className="border-2 border-gray-300 text-gray-700 hover:bg-gray-50 text-lg px-8 py-6" asChild>
+                                <a href="https://sistema.freewaynet.com.br/central_assinante_web/login" target="_blank" rel="noopener noreferrer">
+                                    Área do Cliente
+                                </a>
                             </Button>
                         </div>
 
