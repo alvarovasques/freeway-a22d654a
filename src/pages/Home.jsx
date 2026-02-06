@@ -5,7 +5,7 @@ import InfrastructureSection from '@/components/freeway/InfrastructureSection';
 import PlansSection from '@/components/freeway/PlansSection';
 import MobilePlansSection from '@/components/freeway/MobilePlansSection';
 import SolutionsSection from '@/components/freeway/SolutionsSection';
-import SolutionsCalculator from '@/components/freeway/SolutionsCalculator';
+// import SolutionsCalculator from '@/components/freeway/SolutionsCalculator';
 import InstitutionalSection from '@/components/freeway/InstitutionalSection';
 import FAQSection from '@/components/freeway/FAQSection';
 import CTASection from '@/components/freeway/CTASection';
