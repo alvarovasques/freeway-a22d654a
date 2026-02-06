@@ -81,8 +81,10 @@ export default function Header() {
 
                         {/* CTA Buttons */}
                         <div className="hidden lg:flex items-center gap-3">
-                            <Button variant="outline" className="border-white/30 text-white hover:bg-white/10 bg-transparent">
-                                Área do Cliente
+                            <Button variant="outline" className="border-white/30 text-white hover:bg-white/10 bg-transparent" asChild>
+                                <a href="https://sistema.freewaynet.com.br/central_assinante_web/login" target="_blank" rel="noopener noreferrer">
+                                    Área do Cliente
+                                </a>
                             </Button>
                             <Button className="bg-white text-orange-600 hover:bg-gray-100 shadow-lg" onClick={openChat}>
                                 Falar com Consultor
@@ -120,7 +122,11 @@ export default function Header() {
                                     </a>
                                 ))}
                                 <div className="pt-4 space-y-3 border-t border-orange-400/30">
-                                    <Button variant="outline" className="w-full border-white/30 text-white hover:bg-white/10 bg-transparent">Área do Cliente</Button>
+                                    <Button variant="outline" className="w-full border-white/30 text-white hover:bg-white/10 bg-transparent" asChild>
+                                        <a href="https://sistema.freewaynet.com.br/central_assinante_web/login" target="_blank" rel="noopener noreferrer">
+                                            Área do Cliente
+                                        </a>
+                                    </Button>
                                     <Button className="w-full bg-white text-orange-600 hover:bg-gray-100" onClick={openChat}>Falar com Consultor</Button>
                                 </div>
                             </div>
