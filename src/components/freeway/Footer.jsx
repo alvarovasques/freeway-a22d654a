@@ -37,7 +37,7 @@ export default function Footer({ onContactClick }) {
                             <img 
                                 src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69849cab90d0616170d0109b/aad82955b_logo.png" 
                                 alt="Freeway Tecnologia" 
-                                className="h-12 w-auto"
+                                className="h-16 w-auto"
                             />
                         </div>
                         <p className="text-gray-400 leading-relaxed mb-6 max-w-sm">

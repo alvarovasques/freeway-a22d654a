@@ -87,7 +87,7 @@ function CondominiosHeader({ onContactClick }) {
                             <img 
                                 src={logo} 
                                 alt="Freeway Tecnologia" 
-                                className="h-12 w-auto"
+                                className="h-16 w-auto"
                             />
                         </Link>
 
@@ -638,7 +638,7 @@ function CondominiosFooter({ onContactClick }) {
                         <img 
                             src={logo} 
                             alt="Freeway Tecnologia" 
-                            className="h-12 w-auto mb-4"
+                            className="h-16 w-auto mb-4"
                         />
                         <p className="text-gray-400">
                             Pioneira em Fibra Óptica no MS
