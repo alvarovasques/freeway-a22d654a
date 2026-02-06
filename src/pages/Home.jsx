@@ -32,7 +32,7 @@ export default function Home() {
                 <PlansSection onContactClick={openContactModal} />
                 <MobilePlansSection onContactClick={openContactModal} />
                 <SolutionsSection onContactClick={openContactModal} />
-                <SolutionsCalculator onContactClick={openContactModal} />
+                {/* <SolutionsCalculator onContactClick={openContactModal} /> */}
                 <InstitutionalSection />
                 <FAQSection />
                 <CTASection onContactClick={openContactModal} />
