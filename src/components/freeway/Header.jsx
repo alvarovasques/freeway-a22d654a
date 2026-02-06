@@ -18,7 +18,6 @@ export default function Header({ onContactClick }) {
         { label: 'Infraestrutura', href: '#infraestrutura' },
         { label: 'Planos', href: '#planos' },
         { label: 'Soluções', href: '#solucoes' },
-        { label: 'Calculadora', href: '#calculadora' },
         { label: 'FAQ', href: '#faq' },
         { label: 'Contato', href: '#contato' },
     ];
