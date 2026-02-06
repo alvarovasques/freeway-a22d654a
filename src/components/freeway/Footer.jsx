@@ -1,5 +1,6 @@
 import React from 'react';
-import { Phone, MapPin, Clock, Mail, Facebook, Instagram, Youtube, Linkedin, ExternalLink } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Phone, MapPin, Clock, Mail, Facebook, Instagram, Youtube, Linkedin, ExternalLink, Building2 } from 'lucide-react';
 
 export default function Footer({ onContactClick }) {
     const links = {
@@ -13,6 +14,7 @@ export default function Footer({ onContactClick }) {
         empresa: [
             { label: 'Sobre Nós', href: '#institucional' },
             { label: 'Nossa Infraestrutura', href: '#solucoes' },
+            { label: 'Condomínios Inteligentes', href: '/Condominios', isRoute: true },
             { label: 'Cobertura', href: '#' },
             { label: 'Trabalhe Conosco', href: '#' },
         ],
@@ -95,9 +97,19 @@ export default function Footer({ onContactClick }) {
                         <ul className="space-y-3">
                             {links.empresa.map((link, i) => (
                                 <li key={i}>
-                                    <a href={link.href} className="text-gray-400 hover:text-orange-400 transition-colors">
-                                        {link.label}
-                                    </a>
+                                    {link.isRoute ? (
+                                        <Link 
+                                            to={link.href} 
+                                            className="text-gray-400 hover:text-orange-400 transition-colors flex items-center gap-1"
+                                        >
+                                            {link.label}
+                                            <Building2 className="w-3 h-3" />
+                                        </Link>
+                                    ) : (
+                                        <a href={link.href} className="text-gray-400 hover:text-orange-400 transition-colors">
+                                            {link.label}
+                                        </a>
+                                    )}
                                 </li>
                             ))}
                         </ul>
