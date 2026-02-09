@@ -25,6 +25,7 @@ export default function SolutionsSection({ onContactClick }) {
             features: ['URA completa', 'Gravação', 'Portabilidade'],
             color: 'purple',
             link: '/PabxVirtual'
+            link: '/PabxVirtual'
         },
         {
             icon: Building2,
