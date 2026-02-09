@@ -9,7 +9,7 @@ export default function Footer({ onContactClick }) {
             { label: 'Speedway Empresarial', href: '#planos' },
             { label: 'Speedway Full', href: '#planos' },
             { label: 'Mega Link', href: '/MegaLink', isRoute: true },
-            { label: 'PABX Virtual', href: '#solucoes' },
+            { label: 'PABX Virtual', href: '/PabxVirtual', isRoute: true },
         ],
         empresa: [
             { label: 'Sobre Nós', href: '#institucional' },

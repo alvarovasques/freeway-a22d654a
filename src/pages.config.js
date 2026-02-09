@@ -50,12 +50,14 @@
 import Home from './pages/Home';
 import Condominios from './pages/Condominios';
 import MegaLink from './pages/MegaLink';
+import PabxVirtual from './pages/PabxVirtual';
 
 
 export const PAGES = {
     "Home": Home,
     "Condominios": Condominios,
     "MegaLink": MegaLink,
+    "PabxVirtual": PabxVirtual,
 }
 
 export const pagesConfig = {
