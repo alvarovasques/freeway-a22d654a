@@ -23,7 +23,8 @@ export default function SolutionsSection({ onContactClick }) {
             description: 'Sistema de URA completo com gravação de chamadas, portabilidade e gestão centralizada.',
             price: 'A partir de R$ 99,00/mês',
             features: ['URA completa', 'Gravação', 'Portabilidade'],
-            color: 'purple'
+            color: 'purple',
+            link: '/PabxVirtual'
         },
         {
             icon: Building2,
