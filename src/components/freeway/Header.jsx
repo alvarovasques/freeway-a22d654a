@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, MapPin, Clock, Menu, X } from 'lucide-react';
+import { Phone, MapPin, Clock, Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from 'framer-motion';
 import logo from '@/assets/logo.png';
@@ -8,6 +8,7 @@ import logo from '@/assets/logo.png';
 export default function Header({ onContactClick }) {
     const [isScrolled, setIsScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [mobileSolucoesOpen, setMobileSolucoesOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -15,13 +16,16 @@ export default function Header({ onContactClick }) {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    const solucoesSubItems = [
+        { label: 'Mega Link', href: '/MegaLink' },
+        { label: 'PABX Virtual', href: '/PabxVirtual' },
+        { label: 'Condomínios', href: '/Condominios' },
+    ];
+
     const navItems = [
         { label: 'Infraestrutura', href: '#infraestrutura' },
         { label: 'Planos', href: '#planos' },
-        { label: 'Soluções', href: '#solucoes' },
-        { label: 'Mega Link', href: '/MegaLink', isRoute: true },
-        { label: 'PABX Virtual', href: '/PabxVirtual', isRoute: true },
-        { label: 'Condomínios', href: '/Condominios', isRoute: true },
+        { label: 'Soluções', href: '#solucoes', hasDropdown: true },
         { label: 'FAQ', href: '#faq' },
         { label: 'Contato', href: '#contato' },
     ];
@@ -64,15 +68,29 @@ export default function Header({ onContactClick }) {
                         {/* Desktop Navigation */}
                         <nav className="hidden lg:flex items-center gap-8">
                             {navItems.map((item) => (
-                                item.isRoute ? (
-                                    <Link 
-                                        key={item.label}
-                                        to={item.href}
-                                        className="text-white/90 hover:text-white font-medium transition-colors relative group"
-                                    >
-                                        {item.label}
-                                        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all group-hover:w-full" />
-                                    </Link>
+                                item.hasDropdown ? (
+                                    <div key={item.label} className="relative group">
+                                        <a 
+                                            href={item.href}
+                                            className="text-white/90 hover:text-white font-medium transition-colors relative flex items-center gap-1"
+                                        >
+                                            {item.label}
+                                            <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
+                                        </a>
+                                        <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                                            <div className="bg-white rounded-lg shadow-xl border border-gray-100 py-2 min-w-[200px]">
+                                                {solucoesSubItems.map((sub) => (
+                                                    <Link
+                                                        key={sub.label}
+                                                        to={sub.href}
+                                                        className="block px-4 py-2.5 text-gray-700 hover:bg-orange-50 hover:text-orange-600 font-medium transition-colors"
+                                                    >
+                                                        {sub.label}
+                                                    </Link>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
                                 ) : (
                                     <a 
                                         key={item.label}
@@ -119,15 +137,30 @@ export default function Header({ onContactClick }) {
                         >
                             <div className="px-6 py-4 space-y-4">
                                 {navItems.map((item) => (
-                                    item.isRoute ? (
-                                        <Link 
-                                            key={item.label}
-                                            to={item.href}
-                                            className="block text-white/90 hover:text-white font-medium py-2"
-                                            onClick={() => setMobileMenuOpen(false)}
-                                        >
-                                            {item.label}
-                                        </Link>
+                                    item.hasDropdown ? (
+                                        <div key={item.label}>
+                                            <button
+                                                className="flex items-center justify-between w-full text-white/90 hover:text-white font-medium py-2"
+                                                onClick={() => setMobileSolucoesOpen(!mobileSolucoesOpen)}
+                                            >
+                                                {item.label}
+                                                <ChevronDown className={`w-4 h-4 transition-transform ${mobileSolucoesOpen ? 'rotate-180' : ''}`} />
+                                            </button>
+                                            {mobileSolucoesOpen && (
+                                                <div className="pl-4 space-y-1">
+                                                    {solucoesSubItems.map((sub) => (
+                                                        <Link
+                                                            key={sub.label}
+                                                            to={sub.href}
+                                                            className="block text-white/70 hover:text-white font-medium py-2"
+                                                            onClick={() => setMobileMenuOpen(false)}
+                                                        >
+                                                            {sub.label}
+                                                        </Link>
+                                                    ))}
+                                                </div>
+                                            )}
+                                        </div>
                                     ) : (
                                         <a 
                                             key={item.label}
