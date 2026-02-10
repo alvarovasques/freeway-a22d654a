@@ -17,9 +17,11 @@ export default function Header({ onContactClick }) {
     }, []);
 
     const solucoesSubItems = [
-        { label: 'Mega Link', href: '/MegaLink' },
-        { label: 'PABX Virtual', href: '/PabxVirtual' },
-        { label: 'Condomínios', href: '/Condominios' },
+        { label: 'Mega Link', href: '/MegaLink', isRoute: true },
+        { label: 'PABX Virtual', href: '/PabxVirtual', isRoute: true },
+        { label: 'Condomínios', href: '/Condominios', isRoute: true },
+        { label: 'Telefonia Móvel', href: '#telefonia-mobile', isRoute: false },
+        { label: 'M2M / IoT', href: '#telefonia-m2m', isRoute: false },
     ];
 
     const navItems = [
@@ -80,13 +82,23 @@ export default function Header({ onContactClick }) {
                                         <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                                             <div className="bg-white rounded-lg shadow-xl border border-gray-100 py-2 min-w-[200px]">
                                                 {solucoesSubItems.map((sub) => (
-                                                    <Link
-                                                        key={sub.label}
-                                                        to={sub.href}
-                                                        className="block px-4 py-2.5 text-gray-700 hover:bg-orange-50 hover:text-orange-600 font-medium transition-colors"
-                                                    >
-                                                        {sub.label}
-                                                    </Link>
+                                                    sub.isRoute ? (
+                                                        <Link
+                                                            key={sub.label}
+                                                            to={sub.href}
+                                                            className="block px-4 py-2.5 text-gray-700 hover:bg-orange-50 hover:text-orange-600 font-medium transition-colors"
+                                                        >
+                                                            {sub.label}
+                                                        </Link>
+                                                    ) : (
+                                                        <a
+                                                            key={sub.label}
+                                                            href={sub.href}
+                                                            className="block px-4 py-2.5 text-gray-700 hover:bg-orange-50 hover:text-orange-600 font-medium transition-colors"
+                                                        >
+                                                            {sub.label}
+                                                        </a>
+                                                    )
                                                 ))}
                                             </div>
                                         </div>
@@ -149,14 +161,25 @@ export default function Header({ onContactClick }) {
                                             {mobileSolucoesOpen && (
                                                 <div className="pl-4 space-y-1">
                                                     {solucoesSubItems.map((sub) => (
-                                                        <Link
-                                                            key={sub.label}
-                                                            to={sub.href}
-                                                            className="block text-white/70 hover:text-white font-medium py-2"
-                                                            onClick={() => setMobileMenuOpen(false)}
-                                                        >
-                                                            {sub.label}
-                                                        </Link>
+                                                        sub.isRoute ? (
+                                                            <Link
+                                                                key={sub.label}
+                                                                to={sub.href}
+                                                                className="block text-white/70 hover:text-white font-medium py-2"
+                                                                onClick={() => setMobileMenuOpen(false)}
+                                                            >
+                                                                {sub.label}
+                                                            </Link>
+                                                        ) : (
+                                                            <a
+                                                                key={sub.label}
+                                                                href={sub.href}
+                                                                className="block text-white/70 hover:text-white font-medium py-2"
+                                                                onClick={() => setMobileMenuOpen(false)}
+                                                            >
+                                                                {sub.label}
+                                                            </a>
+                                                        )
                                                     ))}
                                                 </div>
                                             )}
