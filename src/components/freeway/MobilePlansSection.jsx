@@ -124,8 +124,16 @@ export default function MobilePlansSection({ onContactClick }) {
     const currentPlans = activeTab === 'mobile' ? mobilePlans : m2mPlans;
 
     return (
-        <section id="telefonia" className="py-24 bg-gradient-to-b from-gray-50 to-white" aria-label="Planos de Telefonia Móvel e M2M - Freeway Tecnologia">
-            <div className="max-w-7xl mx-auto px-6">
+        <section id="telefonia" className="py-24 bg-gray-900 relative overflow-hidden" aria-label="Planos de Telefonia Móvel e M2M - Freeway Tecnologia">
+            {/* Background Pattern */}
+            <div className="absolute inset-0 opacity-5">
+                <div className="absolute inset-0" style={{
+                    backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
+                    backgroundSize: '40px 40px'
+                }} />
+            </div>
+
+            <div className="relative max-w-7xl mx-auto px-6">
                 {/* Header */}
                 <motion.div 
                     initial={{ opacity: 0, y: 20 }}
@@ -133,15 +141,15 @@ export default function MobilePlansSection({ onContactClick }) {
                     viewport={{ once: true }}
                     className="text-center mb-12"
                 >
-                    <span className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                    <span className="inline-flex items-center gap-2 bg-orange-500/20 text-orange-400 px-4 py-2 rounded-full text-sm font-semibold mb-6">
                         <Radio className="w-4 h-4" />
                         Telefonia & IoT
                     </span>
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 mb-6">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-6">
                         Conectividade{' '}
-                        <span className="text-orange-500">móvel inteligente</span>
+                        <span className="text-orange-400">móvel inteligente</span>
                     </h2>
-                    <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                    <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                         Planos de telefonia móvel 5G e soluções M2M para sensores, rastreamento e IoT empresarial.
                     </p>
                 </motion.div>
@@ -153,13 +161,13 @@ export default function MobilePlansSection({ onContactClick }) {
                     viewport={{ once: true }}
                     className="flex justify-center mb-12"
                 >
-                    <div className="inline-flex bg-gray-100 rounded-2xl p-1.5">
+                    <div className="inline-flex bg-white/10 backdrop-blur-sm rounded-2xl p-1.5">
                         <button
                             onClick={() => setActiveTab('mobile')}
                             className={`px-6 py-3 rounded-xl font-semibold transition-all ${
                                 activeTab === 'mobile'
-                                    ? 'bg-white text-gray-900 shadow-md'
-                                    : 'text-gray-600 hover:text-gray-900'
+                                    ? 'bg-orange-500 text-white shadow-lg shadow-orange-500/30'
+                                    : 'text-gray-300 hover:text-white'
                             }`}
                         >
                             <span className="flex items-center gap-2">
@@ -171,8 +179,8 @@ export default function MobilePlansSection({ onContactClick }) {
                             onClick={() => setActiveTab('m2m')}
                             className={`px-6 py-3 rounded-xl font-semibold transition-all ${
                                 activeTab === 'm2m'
-                                    ? 'bg-white text-gray-900 shadow-md'
-                                    : 'text-gray-600 hover:text-gray-900'
+                                    ? 'bg-orange-500 text-white shadow-lg shadow-orange-500/30'
+                                    : 'text-gray-300 hover:text-white'
                             }`}
                         >
                             <span className="flex items-center gap-2">
@@ -191,10 +199,10 @@ export default function MobilePlansSection({ onContactClick }) {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.1 }}
-                            className={`relative bg-white rounded-3xl p-8 ${
+                            className={`relative bg-white/5 backdrop-blur-sm rounded-3xl p-8 border ${
                                 plan.popular 
-                                    ? 'ring-2 ring-orange-500 shadow-2xl shadow-orange-500/20' 
-                                    : 'border border-gray-200 shadow-lg'
+                                    ? 'border-orange-500 shadow-2xl shadow-orange-500/20' 
+                                    : 'border-white/10'
                             }`}
                         >
                             {plan.popular && (
@@ -207,24 +215,24 @@ export default function MobilePlansSection({ onContactClick }) {
                                 <div className={`w-14 h-14 rounded-2xl flex items-center justify-center ${
                                     plan.popular 
                                         ? 'bg-gradient-to-br from-orange-500 to-orange-600 shadow-lg shadow-orange-500/30' 
-                                        : 'bg-gray-100'
+                                        : 'bg-white/10'
                                 }`}>
-                                    <plan.icon className={`w-7 h-7 ${plan.popular ? 'text-white' : 'text-gray-600'}`} />
+                                    <plan.icon className={`w-7 h-7 ${plan.popular ? 'text-white' : 'text-orange-400'}`} />
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold text-gray-900">{plan.name}</h3>
-                                    <p className="text-sm text-gray-500">{plan.subtitle}</p>
+                                    <h3 className="text-xl font-bold text-white">{plan.name}</h3>
+                                    <p className="text-sm text-gray-400">{plan.subtitle}</p>
                                 </div>
                             </div>
 
                             <div className="mb-8">
                                 <div className="flex items-baseline gap-1">
-                                    <span className="text-sm text-gray-500">A partir de</span>
+                                    <span className="text-sm text-gray-400">A partir de</span>
                                 </div>
                                 <div className="flex items-baseline gap-2">
-                                    <span className="text-sm text-gray-600">R$</span>
-                                    <span className="text-5xl font-black text-gray-900">{plan.price}</span>
-                                    <span className="text-gray-500">/mês</span>
+                                    <span className="text-sm text-gray-400">R$</span>
+                                    <span className="text-5xl font-black text-white">{plan.price}</span>
+                                    <span className="text-gray-400">/mês</span>
                                 </div>
                             </div>
 
@@ -232,11 +240,11 @@ export default function MobilePlansSection({ onContactClick }) {
                                 {plan.features.map((feature, i) => (
                                     <li key={i} className="flex items-start gap-3">
                                         <div className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${
-                                            plan.popular ? 'bg-orange-100 text-orange-600' : 'bg-gray-100 text-gray-600'
+                                            plan.popular ? 'bg-orange-500/20 text-orange-400' : 'bg-white/10 text-gray-300'
                                         }`}>
                                             <Check className="w-3 h-3" />
                                         </div>
-                                        <span className="text-gray-600">{feature}</span>
+                                        <span className="text-gray-300">{feature}</span>
                                     </li>
                                 ))}
                             </ul>
@@ -245,7 +253,7 @@ export default function MobilePlansSection({ onContactClick }) {
                                 className={`w-full py-6 text-lg ${
                                     plan.popular 
                                         ? 'bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white shadow-lg shadow-orange-500/30' 
-                                        : 'bg-gray-900 hover:bg-gray-800 text-white'
+                                        : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'
                                 }`}
                                 onClick={onContactClick}
                             >
