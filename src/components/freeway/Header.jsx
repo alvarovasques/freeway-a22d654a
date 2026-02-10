@@ -73,7 +73,7 @@ export default function Header({ onContactClick }) {
                                 item.hasDropdown ? (
                                     <div key={item.label} className="relative group">
                                         <span 
-                                            className="text-white/90 hover:text-white font-medium transition-colors relative flex items-center gap-1 cursor-default"
+                                            className="text-white/90 hover:text-white font-medium transition-colors relative flex items-center gap-1 cursor-pointer"
                                         >
                                             {item.label}
                                             <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
