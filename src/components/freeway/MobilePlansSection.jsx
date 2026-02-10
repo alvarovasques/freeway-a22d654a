@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Check, Star, Smartphone, Radio, Cpu, ArrowRight, Signal, Wifi } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -6,6 +6,22 @@ import { Badge } from "@/components/ui/badge";
 
 export default function MobilePlansSection({ onContactClick }) {
     const [activeTab, setActiveTab] = useState('mobile');
+
+    useEffect(() => {
+        const handleHash = () => {
+            const hash = window.location.hash;
+            if (hash === '#telefonia-mobile') {
+                setActiveTab('mobile');
+                document.getElementById('telefonia')?.scrollIntoView({ behavior: 'smooth' });
+            } else if (hash === '#telefonia-m2m') {
+                setActiveTab('m2m');
+                document.getElementById('telefonia')?.scrollIntoView({ behavior: 'smooth' });
+            }
+        };
+        handleHash();
+        window.addEventListener('hashchange', handleHash);
+        return () => window.removeEventListener('hashchange', handleHash);
+    }, []);
 
     const mobilePlans = [
         {
