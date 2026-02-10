@@ -31,7 +31,7 @@ function Header({ onContactClick }) {
         { label: 'Especificações', href: '#especificacoes' },
         { label: 'Planos', href: '#planos' },
         { label: 'Suporte', href: '#suporte' },
-        { label: 'Voltar ao Site', href: '/', isRoute: true },
+        { label: '← Voltar ao Site', href: '/', isRoute: true },
     ];
 
     return (

@@ -31,7 +31,7 @@ function Header({ onContactClick }) {
         { label: 'Vantagens', href: '#vantagens' },
         { label: 'Planos', href: '#planos' },
         { label: 'Suporte', href: '#suporte' },
-        { label: 'Voltar ao Site', href: '/', isRoute: true },
+        { label: '← Voltar ao Site', href: '/', isRoute: true },
     ];
 
     return (
