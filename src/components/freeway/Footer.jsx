@@ -20,9 +20,9 @@ export default function Footer({ onContactClick }) {
         ],
         suporte: [
             { label: 'Área do Cliente', href: 'https://sistema.freewaynet.com.br/central_assinante_web/login', external: true },
-            { label: 'Central de Ajuda', href: '#', openChat: true },
-            { label: 'Suporte Técnico', href: '#', openChat: true },
-            { label: 'Status da Rede', href: '#' },
+            { label: 'Central de Ajuda', openChat: true },
+            { label: 'Suporte Técnico', openChat: true },
+            { label: '2ª Via de Boleto', href: 'https://sistema.freewaynet.com.br/central_assinante_web/login', external: true },
         ]
     };
 
