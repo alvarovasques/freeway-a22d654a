@@ -28,7 +28,7 @@ export default function InstitutionalSection() {
     ];
 
     return (
-        <section id="institucional" className="py-24 bg-gradient-to-b from-gray-50 to-white">
+        <section id="quem-somos" className="py-24 bg-gradient-to-b from-gray-50 to-white">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                     {/* Content */}
