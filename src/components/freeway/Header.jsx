@@ -30,7 +30,6 @@ export default function Header({ onContactClick }) {
         { label: 'Planos', href: '#planos' },
         { label: 'Soluções', href: '#solucoes', hasDropdown: true },
         { label: 'FAQ', href: '#faq' },
-        { label: 'Contato', href: '#contato' },
     ];
 
     return (
