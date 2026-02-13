@@ -79,7 +79,7 @@ export default function Header({ onContactClick }) {
                                             {item.label}
                                             <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
                                         </span>
-                                        <div className="absolute top-full left-0 pt-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-100">
+                                        <div className="absolute top-full left-0 pt-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-0">
                                             <div className="bg-white rounded-lg shadow-xl border border-gray-100 py-2 min-w-[200px]">
                                                 {solucoesSubItems.map((sub) => (
                                                     sub.isRoute ? (
