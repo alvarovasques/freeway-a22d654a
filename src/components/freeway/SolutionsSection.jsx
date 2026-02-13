@@ -43,6 +43,7 @@ export default function SolutionsSection({ onContactClick }) {
             priceNote: 'Franquia mínima: 100 portas',
             features: ['OLT própria', 'VLAN exclusiva', 'Isolamento de tráfego'],
             color: 'green',
+            link: '/RedeNeutra'
         }
     ];
 
