@@ -26,6 +26,7 @@ export default function Header({ onContactClick }) {
     ];
 
     const navItems = [
+        { label: 'Quem Somos', href: '#quem-somos' },
         { label: 'Infraestrutura', href: '#infraestrutura' },
         { label: 'Planos', href: '#planos' },
         { label: 'Soluções', href: '#solucoes', hasDropdown: true },
