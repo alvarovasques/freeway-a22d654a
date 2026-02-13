@@ -51,6 +51,7 @@ import Home from './pages/Home';
 import Condominios from './pages/Condominios';
 import MegaLink from './pages/MegaLink';
 import PabxVirtual from './pages/PabxVirtual';
+import RedeNeutra from './pages/RedeNeutra';
 
 
 export const PAGES = {
@@ -58,6 +59,7 @@ export const PAGES = {
     "Condominios": Condominios,
     "MegaLink": MegaLink,
     "PabxVirtual": PabxVirtual,
+    "RedeNeutra": RedeNeutra,
 }
 
 export const pagesConfig = {

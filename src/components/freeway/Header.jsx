@@ -20,6 +20,7 @@ export default function Header({ onContactClick }) {
         { label: 'Mega Link', href: '/MegaLink', isRoute: true },
         { label: 'PABX Virtual', href: '/PabxVirtual', isRoute: true },
         { label: 'Condomínios', href: '/Condominios', isRoute: true },
+        { label: 'Rede Neutra', href: '/RedeNeutra', isRoute: true },
         { label: 'Telefonia Móvel', href: '#telefonia-mobile', isRoute: false },
         { label: 'M2M / IoT', href: '#telefonia-m2m', isRoute: false },
     ];
