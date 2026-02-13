@@ -34,6 +34,15 @@ export default function SolutionsSection({ onContactClick }) {
             features: ['FTTH unificado', 'Wi-Fi áreas comuns', 'Segurança'],
             color: 'orange',
             link: '/Condominios'
+        },
+        {
+            icon: Cpu,
+            title: 'Rede Neutra Freeway',
+            description: 'Infraestrutura de fibra óptica de última geração disponível para uso por outros provedores (ISPs). Redução de CAPEX, agilidade no Time-to-Market e ampla cobertura em Campo Grande.',
+            price: 'Porta: R$ 25,00 (R$ 20,00 c/ Link Freeway)',
+            priceNote: 'Franquia mínima: 100 portas',
+            features: ['OLT própria', 'VLAN exclusiva', 'Isolamento de tráfego'],
+            color: 'green',
         }
     ];
 
