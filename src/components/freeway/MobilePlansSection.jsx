@@ -114,52 +114,29 @@ export default function MobilePlansSection({ onContactClick }) {
         }
     ];
 
-    const m2mPlans = [
+    const m2mCategories = [
         {
-            name: 'M2M Básico',
-            subtitle: 'Para sensores e telemetria',
-            price: '4,58',
+            name: 'M2M Padrão',
+            subtitle: 'Interação Humana (POS, terminais)',
             icon: Radio,
-            features: [
-                'Conexão para sensores',
-                'Telemetria básica',
-                'Cobertura nacional',
-                'Dados sob demanda',
-                'Painel de controle',
-                'Suporte técnico'
-            ],
-            cta: 'Solicitar Proposta'
+            plans: [
+                { data: '2MB', price: '8,74' },
+                { data: '10MB', price: '10,82' },
+                { data: '20MB', price: '11,42' },
+                { data: 'Alto Consumo', price: '11,42' }
+            ]
         },
         {
-            name: 'M2M Plus',
-            subtitle: 'Para rastreamento e monitoramento',
-            price: '9,99',
-            icon: Signal,
-            popular: true,
-            features: [
-                'Rastreamento GPS',
-                'Alertas em tempo real',
-                'Cobertura 4G/5G',
-                'Dados dedicados',
-                'Dashboard avançado',
-                'Suporte prioritário'
-            ],
-            cta: 'Solicitar Proposta'
-        },
-        {
-            name: 'M2M Enterprise',
-            subtitle: 'Para operações críticas',
-            price: '19,99',
+            name: 'M2M Especial',
+            subtitle: 'Telemetria e Rastreamento',
             icon: Cpu,
-            features: [
-                'API dedicada',
-                'Dashboards customizados',
-                'SLA garantido',
-                'Multi-dispositivos',
-                'Integração completa',
-                'Suporte 24/7'
-            ],
-            cta: 'Solicitar Proposta'
+            popular: true,
+            plans: [
+                { data: '2MB', price: '4,58' },
+                { data: '10MB', price: '6,67' },
+                { data: '20MB', price: '7,27' },
+                { data: 'Alto Consumo', price: '7,27' }
+            ]
         }
     ];
 
@@ -192,7 +169,7 @@ export default function MobilePlansSection({ onContactClick }) {
                         <span className="text-orange-400">móvel inteligente</span>
                     </h2>
                     <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                        Planos de telefonia móvel 5G e soluções M2M para sensores, rastreamento e IoT empresarial.
+                        Planos de telefonia móvel e soluções M2M para sensores, rastreamento e IoT empresarial.
                     </p>
                 </motion.div>
 
@@ -233,88 +210,175 @@ export default function MobilePlansSection({ onContactClick }) {
                     </div>
                 </motion.div>
 
-                {/* Plans Grid */}
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {currentPlans.map((plan, index) => (
-                        <motion.div
-                            key={`${activeTab}-${index}`}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: index * 0.1 }}
-                            className={`relative bg-white/5 backdrop-blur-sm rounded-3xl p-8 border ${
-                                plan.popular 
-                                    ? 'border-orange-500 shadow-2xl shadow-orange-500/20' 
-                                    : 'border-white/10'
-                            }`}
-                        >
-                            {plan.popular && (
-                                <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-1">
-                                    Mais Popular
-                                </Badge>
-                            )}
+                {/* Mobile Plans Grid */}
+                {activeTab === 'mobile' && (
+                    <>
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {mobilePlans.map((plan, index) => (
+                                <motion.div
+                                    key={`mobile-${index}`}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: index * 0.1 }}
+                                    className={`relative bg-white/5 backdrop-blur-sm rounded-3xl p-8 border ${
+                                        plan.popular 
+                                            ? 'border-orange-500 shadow-2xl shadow-orange-500/20' 
+                                            : 'border-white/10'
+                                    }`}
+                                >
+                                    {plan.popular && (
+                                        <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-1">
+                                            Mais Popular
+                                        </Badge>
+                                    )}
 
-                            <div className="flex items-center gap-4 mb-6">
-                                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center ${
-                                    plan.popular 
-                                        ? 'bg-gradient-to-br from-orange-500 to-orange-600 shadow-lg shadow-orange-500/30' 
-                                        : 'bg-white/10'
-                                }`}>
-                                    <plan.icon className={`w-7 h-7 ${plan.popular ? 'text-white' : 'text-orange-400'}`} />
-                                </div>
-                                <div>
-                                    <h3 className="text-xl font-bold text-white">{plan.name}</h3>
-                                    <p className="text-sm text-gray-400">{plan.subtitle}</p>
-                                </div>
-                            </div>
-
-                            <div className="mb-8">
-                                <div className="flex items-baseline gap-1">
-                                    <span className="text-sm text-gray-400">A partir de</span>
-                                </div>
-                                <div className="flex items-baseline gap-2">
-                                    <span className="text-sm text-gray-400">R$</span>
-                                    <span className="text-5xl font-black text-white">{plan.price}</span>
-                                    <span className="text-gray-400">/mês</span>
-                                </div>
-                            </div>
-
-                            <ul className="space-y-4 mb-8">
-                                {plan.features.map((feature, i) => (
-                                    <li key={i} className="flex items-start gap-3">
-                                        <div className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${
-                                            plan.popular ? 'bg-orange-500/20 text-orange-400' : 'bg-white/10 text-gray-300'
+                                    <div className="flex items-center gap-4 mb-6">
+                                        <div className={`w-14 h-14 rounded-2xl flex items-center justify-center ${
+                                            plan.popular 
+                                                ? 'bg-gradient-to-br from-orange-500 to-orange-600 shadow-lg shadow-orange-500/30' 
+                                                : 'bg-white/10'
                                         }`}>
-                                            <Check className="w-3 h-3" />
+                                            <plan.icon className={`w-7 h-7 ${plan.popular ? 'text-white' : 'text-orange-400'}`} />
                                         </div>
-                                        <span className="text-gray-300">{feature}</span>
-                                    </li>
-                                ))}
-                            </ul>
+                                        <div>
+                                            <h3 className="text-xl font-bold text-white">{plan.name}</h3>
+                                            <p className="text-sm text-gray-400">{plan.subtitle}</p>
+                                        </div>
+                                    </div>
 
-                            <Button 
-                                className={`w-full py-6 text-lg ${
-                                    plan.popular 
-                                        ? 'bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white shadow-lg shadow-orange-500/30' 
-                                        : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'
-                                }`}
-                                onClick={onContactClick}
-                            >
-                                {plan.cta}
-                                <ArrowRight className="ml-2 w-5 h-5" />
-                            </Button>
+                                    <div className="mb-8">
+                                        <div className="flex items-baseline gap-2">
+                                            <span className="text-sm text-gray-400">R$</span>
+                                            <span className="text-5xl font-black text-white">{plan.price}</span>
+                                            <span className="text-gray-400">/mês</span>
+                                        </div>
+                                    </div>
+
+                                    <ul className="space-y-4 mb-8">
+                                        {plan.features.map((feature, i) => (
+                                            <li key={i} className="flex items-start gap-3">
+                                                <div className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${
+                                                    plan.popular ? 'bg-orange-500/20 text-orange-400' : 'bg-white/10 text-gray-300'
+                                                }`}>
+                                                    <Check className="w-3 h-3" />
+                                                </div>
+                                                <span className="text-gray-300">{feature}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+
+                                    <Button 
+                                        className={`w-full py-6 text-lg ${
+                                            plan.popular 
+                                                ? 'bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white shadow-lg shadow-orange-500/30' 
+                                                : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'
+                                        }`}
+                                        onClick={onContactClick}
+                                    >
+                                        {plan.cta}
+                                        <ArrowRight className="ml-2 w-5 h-5" />
+                                    </Button>
+                                </motion.div>
+                            ))}
+                        </div>
+                        <motion.p 
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            viewport={{ once: true }}
+                            className="text-center text-gray-500 mt-8"
+                        >
+                            * Valores por linha/mês. Bônus de dados válido para portabilidade numérica.
+                        </motion.p>
+                    </>
+                )}
+
+                {/* M2M Plans */}
+                {activeTab === 'm2m' && (
+                    <>
+                        <motion.div
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            className="bg-white/5 backdrop-blur-sm rounded-2xl border border-orange-500/30 px-6 py-4 mb-10 text-center"
+                        >
+                            <p className="text-orange-400 font-semibold">
+                                Chip M2M: <span className="text-white">R$ 15,00</span> (valor único)
+                            </p>
+                            <p className="text-gray-400 text-sm mt-1">
+                                Para terminais de pagamento (POS), telemetria e rastreamento
+                            </p>
                         </motion.div>
-                    ))}
-                </div>
 
-                {/* Note */}
-                <motion.p 
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    className="text-center text-gray-500 mt-12"
-                >
-                    * Valores iniciais por linha. Consulte condições especiais para múltiplas linhas e contratos corporativos.
-                </motion.p>
+                        <div className="grid md:grid-cols-2 gap-8">
+                            {m2mCategories.map((cat, catIndex) => (
+                                <motion.div
+                                    key={`m2m-${catIndex}`}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: catIndex * 0.15 }}
+                                    className={`relative bg-white/5 backdrop-blur-sm rounded-3xl p-8 border ${
+                                        cat.popular 
+                                            ? 'border-orange-500 shadow-2xl shadow-orange-500/20' 
+                                            : 'border-white/10'
+                                    }`}
+                                >
+                                    {cat.popular && (
+                                        <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-1">
+                                            Melhor Custo
+                                        </Badge>
+                                    )}
+
+                                    <div className="flex items-center gap-4 mb-6">
+                                        <div className={`w-14 h-14 rounded-2xl flex items-center justify-center ${
+                                            cat.popular 
+                                                ? 'bg-gradient-to-br from-orange-500 to-orange-600 shadow-lg shadow-orange-500/30' 
+                                                : 'bg-white/10'
+                                        }`}>
+                                            <cat.icon className={`w-7 h-7 ${cat.popular ? 'text-white' : 'text-orange-400'}`} />
+                                        </div>
+                                        <div>
+                                            <h3 className="text-xl font-bold text-white">{cat.name}</h3>
+                                            <p className="text-sm text-gray-400">{cat.subtitle}</p>
+                                        </div>
+                                    </div>
+
+                                    <div className="space-y-3 mb-8">
+                                        {cat.plans.map((plan, i) => (
+                                            <div key={i} className={`flex items-center justify-between p-3 rounded-xl ${
+                                                cat.popular ? 'bg-orange-500/10' : 'bg-white/5'
+                                            }`}>
+                                                <span className="text-gray-300 font-medium">{plan.data}</span>
+                                                <span className="text-white font-bold text-lg">R$ {plan.price}<span className="text-gray-400 text-sm font-normal">/mês</span></span>
+                                            </div>
+                                        ))}
+                                    </div>
+
+                                    <Button 
+                                        className={`w-full py-6 text-lg ${
+                                            cat.popular 
+                                                ? 'bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white shadow-lg shadow-orange-500/30' 
+                                                : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'
+                                        }`}
+                                        onClick={onContactClick}
+                                    >
+                                        Solicitar Proposta
+                                        <ArrowRight className="ml-2 w-5 h-5" />
+                                    </Button>
+                                </motion.div>
+                            ))}
+                        </div>
+
+                        <motion.div 
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            viewport={{ once: true }}
+                            className="mt-10 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6 text-center"
+                        >
+                            <p className="text-gray-300">
+                                <span className="text-orange-400 font-semibold">Plataforma de gestão unificada</span> — Controle total de uso e custos em tempo real para todos os seus dispositivos M2M.
+                            </p>
+                        </motion.div>
+                    </>
+                )}
             </div>
         </section>
     );
