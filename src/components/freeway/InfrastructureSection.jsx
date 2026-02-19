@@ -42,7 +42,7 @@ export default function InfrastructureSection() {
         {
             icon: Building2,
             title: 'Cobertura Regional',
-            description: 'Presença em Campo Grande, Dourados, Bonito e principais polos econômicos do estado.',
+            description: 'Sede em Campo Grande e rede MPLS em todos os municípios do Mato Grosso do Sul.',
             stat: 'MS',
             statLabel: 'Cobertura Total'
         }
