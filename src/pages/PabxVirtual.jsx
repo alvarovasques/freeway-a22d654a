@@ -337,11 +337,6 @@ function VantagensSection() {
             icon: Smartphone,
             title: 'Mobilidade Total',
             description: 'Atenda chamadas de qualquer lugar — escritório, home office ou em trânsito. Seu ramal acompanha você.'
-        },
-        {
-            icon: Settings,
-            title: 'Integração com Sistemas',
-            description: 'Conecte o PABX Virtual aos seus sistemas de CRM, ERP e helpdesk existentes para uma operação integrada.'
         }
     ];
 
@@ -362,7 +357,7 @@ function VantagensSection() {
                     </p>
                 </motion.div>
 
-                <div className="grid md:grid-cols-2 gap-8">
+                <div className="grid md:grid-cols-3 gap-8">
                     {vantagens.map((item, index) => (
                         <motion.div
                             key={index}
