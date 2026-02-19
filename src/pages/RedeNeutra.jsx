@@ -561,7 +561,7 @@ function InvestimentoSection({ onContactClick }) {
                                         'Franquia mínima: 100 portas',
                                         'VLAN exclusiva',
                                         'OLT própria',
-                                        'Link de internet incluso',
+                                        
                                         'Suporte técnico dedicado',
                                         'Economia de R$ 5,00 por porta',
                                     ].map((item, i) => (
