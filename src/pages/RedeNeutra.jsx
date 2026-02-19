@@ -551,7 +551,7 @@ function InvestimentoSection({ onContactClick }) {
                             </div>
                             <CardContent className="p-8">
                                 <h3 className="text-2xl font-bold text-white mb-2">Porta com Link Freeway</h3>
-                                <p className="text-white/70 mb-6">Rede Neutra + Link de Internet</p>
+                                <p className="text-white/70 mb-6">Valor de porta para clientes com Link Freeway</p>
                                 <div className="mb-6">
                                     <span className="text-5xl font-black text-white">R$ 20</span>
                                     <span className="text-white/70 text-lg">,00/porta</span>
