@@ -255,7 +255,7 @@ function RecursosSection() {
         {
             icon: Users,
             title: 'Ramais Ilimitados',
-            description: 'Adicione quantos ramais precisar sem custos adicionais de infraestrutura. Escale sua operação sem limites.',
+            description: 'Adicione quantos ramais precisar. Escale sua operação sem limites.',
             highlight: 'Escala livre'
         },
         {
