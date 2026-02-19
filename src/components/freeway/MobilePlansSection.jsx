@@ -25,48 +25,90 @@ export default function MobilePlansSection({ onContactClick }) {
 
     const mobilePlans = [
         {
-            name: 'Móvel Essencial',
-            subtitle: 'Para profissionais e equipes pequenas',
+            name: 'Plano 1GB',
+            subtitle: 'Para uso básico',
             price: '24,99',
             icon: Smartphone,
             features: [
-                'Cobertura 5G',
-                'Ligações ilimitadas',
-                'SMS ilimitado',
-                'Dados móveis inclusos',
-                'Gestão online',
-                'Suporte dedicado'
+                '1GB de internet',
+                '100 minutos de voz',
+                '100 SMS'
             ],
             cta: 'Solicitar Proposta'
         },
         {
-            name: 'Móvel Business',
-            subtitle: 'Para empresas em crescimento',
+            name: 'Plano 3GB',
+            subtitle: '+2GB bônus portabilidade',
+            price: '39,99',
+            icon: Smartphone,
+            features: [
+                '3GB de internet (+2GB portabilidade)',
+                '1000 minutos de voz',
+                '100 SMS',
+                'WhatsApp ilimitado',
+                'Waze ilimitado',
+                'Maps ilimitado'
+            ],
+            cta: 'Solicitar Proposta'
+        },
+        {
+            name: 'Plano 5GB',
+            subtitle: '+3GB bônus portabilidade',
             price: '49,99',
+            icon: Signal,
+            features: [
+                '5GB de internet (+3GB portabilidade)',
+                '1000 minutos de voz',
+                '100 SMS',
+                'WhatsApp ilimitado',
+                'Waze ilimitado',
+                'Maps ilimitado'
+            ],
+            cta: 'Solicitar Proposta'
+        },
+        {
+            name: 'Plano 10GB',
+            subtitle: '+5GB bônus portabilidade',
+            price: '59,99',
             icon: Signal,
             popular: true,
             features: [
-                '5G Premium',
-                'Ligações ilimitadas',
-                'Roaming nacional',
-                'Dados extras inclusos',
-                'Multi-linhas',
-                'Suporte prioritário'
+                '10GB de internet (+5GB portabilidade)',
+                '1000 minutos de voz',
+                '100 SMS',
+                'WhatsApp ilimitado',
+                'Waze ilimitado',
+                'Maps ilimitado'
             ],
             cta: 'Solicitar Proposta'
         },
         {
-            name: 'Móvel Enterprise',
-            subtitle: 'Para grandes corporações',
+            name: 'Plano 15GB',
+            subtitle: '+5GB bônus portabilidade',
+            price: '64,99',
+            icon: Wifi,
+            features: [
+                '15GB de internet (+5GB portabilidade)',
+                '1000 minutos de voz',
+                '100 SMS',
+                'WhatsApp ilimitado',
+                'Waze ilimitado',
+                'Maps ilimitado'
+            ],
+            cta: 'Solicitar Proposta'
+        },
+        {
+            name: 'Plano 25GB',
+            subtitle: '+5GB bônus portabilidade',
             price: '89,99',
             icon: Wifi,
             features: [
-                '5G Ultra velocidade',
-                'Gestão de frota completa',
-                'Multi-linhas ilimitadas',
-                'Relatórios gerenciais',
-                'API de integração',
-                'Suporte 24/7'
+                '25GB de internet (+5GB portabilidade)',
+                '1000 minutos de voz',
+                '100 SMS',
+                'WhatsApp ilimitado',
+                'Waze ilimitado',
+                'Maps ilimitado'
             ],
             cta: 'Solicitar Proposta'
         }
@@ -192,7 +234,7 @@ export default function MobilePlansSection({ onContactClick }) {
                 </motion.div>
 
                 {/* Plans Grid */}
-                <div className="grid lg:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {currentPlans.map((plan, index) => (
                         <motion.div
                             key={`${activeTab}-${index}`}
