@@ -213,6 +213,15 @@ export default function MobilePlansSection({ onContactClick }) {
                 {/* Mobile Plans Grid */}
                 {activeTab === 'mobile' && (
                     <>
+                        <motion.div
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            className="bg-white/5 backdrop-blur-sm rounded-2xl border border-orange-500/30 px-6 py-4 mb-10 text-center"
+                        >
+                            <p className="text-orange-400 font-semibold">
+                                Chip Móvel: <span className="text-white">R$ 10,00</span> (valor único)
+                            </p>
+                        </motion.div>
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                             {mobilePlans.map((plan, index) => (
                                 <motion.div
