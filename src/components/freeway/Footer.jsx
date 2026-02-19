@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, MapPin, Clock, Mail, Facebook, Instagram, Youtube, Linkedin, ExternalLink, Building2 } from 'lucide-react';
+import logo from '@/assets/logo.png';
 
 export default function Footer({ onContactClick }) {
     const links = {
@@ -36,7 +37,7 @@ export default function Footer({ onContactClick }) {
                     <div className="lg:col-span-2">
                         <div className="mb-6">
                             <img 
-                                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69849cab90d0616170d0109b/aad82955b_logo.png" 
+                                src={logo} 
                                 alt="Freeway Tecnologia" 
                                 className="h-16 w-auto"
                             />
