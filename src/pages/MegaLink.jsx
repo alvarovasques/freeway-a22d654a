@@ -254,7 +254,7 @@ function HeroSection({ onContactClick }) {
                                 <div className="grid grid-cols-3 gap-4">
                                     {/* Central Hub */}
                                     <div className="col-span-3 flex justify-center mb-4">
-                                        <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl p-6 text-center shadow-xl">
+                                        <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl p-6 text-center shadow-xl w-full max-w-full">
                                             <Building2 className="w-12 h-12 text-white mx-auto mb-2" />
                                             <span className="text-white font-bold">MATRIZ</span>
                                         </div>
