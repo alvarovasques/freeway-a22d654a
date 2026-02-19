@@ -260,9 +260,19 @@ function HeroSection({ onContactClick }) {
                                         </div>
                                     </div>
                                     
-                                    {/* Connection Lines */}
-                                    <div className="col-span-3 flex justify-center">
-                                        <div className="h-12 w-px bg-gradient-to-b from-orange-500 to-orange-500/30" />
+                                    {/* Connection Lines - one per branch */}
+                                    <div className="col-span-3 grid grid-cols-3 gap-4">
+                                        {[0, 1, 2].map((i) => (
+                                            <div key={i} className="flex justify-center">
+                                                <motion.div 
+                                                    className="h-12 w-0.5 bg-gradient-to-b from-orange-500 to-orange-500/30"
+                                                    initial={{ scaleY: 0 }}
+                                                    animate={{ scaleY: 1 }}
+                                                    transition={{ delay: 0.3 + i * 0.15, duration: 0.4 }}
+                                                    style={{ transformOrigin: 'top' }}
+                                                />
+                                            </div>
+                                        ))}
                                     </div>
                                     
                                     {/* Branches */}
