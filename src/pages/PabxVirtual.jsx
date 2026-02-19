@@ -59,7 +59,7 @@ function Header({ onContactClick }) {
                 <div className="max-w-7xl mx-auto px-6 py-3">
                     <div className="flex items-center justify-between">
                         <Link to="/" className="flex items-center">
-                            <img src={logo} alt="Freeway Tecnologia" className="h-16 w-auto" />
+                            <img src={logo} alt="Freeway Tecnologia" className="h-24 w-auto" />
                         </Link>
 
                         <nav className="hidden lg:flex items-center gap-8">

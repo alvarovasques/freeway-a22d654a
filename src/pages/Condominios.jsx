@@ -89,7 +89,7 @@ function CondominiosHeader({ onContactClick }) {
                             <img 
                                 src={logo} 
                                 alt="Freeway Tecnologia" 
-                                className="h-16 w-auto"
+                                className="h-24 w-auto"
                             />
                         </Link>
 
