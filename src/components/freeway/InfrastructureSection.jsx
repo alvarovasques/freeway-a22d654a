@@ -28,7 +28,7 @@ export default function InfrastructureSection() {
         {
             icon: Globe,
             title: 'Tecnologia GPON',
-            description: 'Aplicação das melhores práticas globais de transmissão de dados, referência em EUA e Japão.',
+            description: 'Aplicação das melhores práticas globais de transmissão de dados.',
             stat: 'GPON',
             statLabel: 'Padrão Global'
         },
