@@ -63,7 +63,7 @@ export default function HeroSection({ onContactClick }) {
                             {[
                                 { icon: Shield, text: 'SLA 4 horas' },
                                 { icon: Zap, text: '100Gbps Backbone' },
-                                { icon: Globe, text: '1.000km Fibra' },
+                                { icon: Globe, text: '+5.000km Fibra' },
                             ].map((item, i) => (
                                 <div key={i} className="flex items-center gap-2 text-gray-600">
                                     <item.icon className="w-5 h-5 text-orange-500" />
