@@ -140,7 +140,7 @@ export default function MobilePlansSection({ onContactClick }) {
         }
     ];
 
-    const currentPlans = activeTab === 'mobile' ? mobilePlans : m2mPlans;
+    // currentPlans only used for mobile tab now; M2M uses m2mCategories directly
 
     return (
         <section id="telefonia" className="py-24 bg-gray-900 relative overflow-hidden" aria-label="Planos de Telefonia Móvel e M2M - Freeway Tecnologia">
