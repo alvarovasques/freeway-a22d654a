@@ -8,7 +8,7 @@ export default function InfrastructureSection() {
             icon: Network,
             title: 'Rede Própria',
             description: 'Mais de 1.000 km de fibra óptica em Campo Grande e interligação com as principais cidades do MS.',
-            stat: '+1.000km',
+            stat: '+5.000km',
             statLabel: 'Fibra Óptica'
         },
         {
