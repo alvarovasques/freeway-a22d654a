@@ -452,37 +452,100 @@ function EspecificacoesSection() {
 
 // Planos Section
 function PlanosSection({ onContactClick }) {
-    const planos = [
+    const planosMunicipal = [
         {
-            name: 'Megalink Municipal',
-            subtitle: 'Mesmo município',
-            price: '300',
+            name: 'Megalink Municipal 10 Mega',
+            price: '300,00',
             speed: '10 Mega',
-            features: [
-                'Interligação no mesmo município',
-                'Velocidade dedicada garantida',
-                'Latência ultra-baixa',
-                'SLA de disponibilidade',
-                'Suporte técnico 24/7'
-            ],
-            highlight: false
+            destaque: 'Ideal para interligação básica de sistemas e dados administrativos com segurança total.',
         },
         {
-            name: 'Megalink Estadual',
-            subtitle: 'Entre cidades do MS',
-            price: '500',
-            speed: '10 Mega',
-            features: [
-                'Interligação entre cidades do MS',
-                'Velocidade dedicada garantida',
-                'Backbone próprio de 100Gbps',
-                'SLA de disponibilidade',
-                'Suporte técnico 24/7',
-                'Gestão via software'
-            ],
-            highlight: true
-        }
+            name: 'Megalink Municipal 100 Mega',
+            price: '1.100,00',
+            speed: '100 Mega',
+            destaque: 'Alta velocidade para tráfego intenso de arquivos, backups locais e sistemas de gestão em tempo real.',
+            popular: true,
+        },
+        {
+            name: 'Megalink Municipal 1 Giga',
+            price: '5.800,00',
+            speed: '1 Giga',
+            destaque: 'Solução de ultra velocidade para empresas que demandam máxima largura de banda e latência mínima entre sites.',
+        },
     ];
+
+    const planosEstadual = [
+        {
+            name: 'Megalink Estadual 10 Mega',
+            price: '500,00',
+            speed: '10 Mega',
+            destaque: 'Conexão estável e segura para comunicação essencial entre unidades distantes.',
+        },
+        {
+            name: 'Megalink Estadual 100 Mega',
+            price: '1.300,00',
+            speed: '100 Mega',
+            destaque: 'Performance robusta para unificar redes corporativas (LANs) em diferentes localidades como se fossem um único site.',
+            popular: true,
+        },
+        {
+            name: 'Megalink Estadual 1 Giga',
+            price: '6.500,00',
+            speed: '1 Giga',
+            destaque: 'Potência máxima em fibra óptica para acelerar grandes volumes de negócios em todo o estado.',
+        },
+    ];
+
+    const diferenciais = [
+        { icon: Shield, text: 'Segurança Máxima: Rede privada livre de riscos de ataques vindos da internet pública.' },
+        { icon: DollarSign, text: 'Custos Fixos: Valor mensal independente do volume de tráfego utilizado.' },
+        { icon: Zap, text: 'Estabilidade: Imune a interferências eletromagnéticas.' },
+        { icon: Settings, text: 'Tecnologia Layer 2: Entrega em interface Ethernet, permitindo total liberdade para gerenciar seus próprios roteadores e firewalls.' },
+        { icon: Headphones, text: 'Suporte 24/7: Assistência técnica e monitoramento sob responsabilidade da Freeway todos os dias da semana.' },
+    ];
+
+    const renderPlanCard = (plano, index) => (
+        <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.1 }}
+            className={`relative rounded-3xl overflow-hidden ${plano.popular ? 'ring-2 ring-orange-500 shadow-2xl shadow-orange-500/20' : ''}`}
+        >
+            {plano.popular && (
+                <div className="absolute top-0 left-0 right-0 bg-gradient-to-r from-orange-500 to-orange-600 text-white text-center text-sm font-semibold py-2 z-10">
+                    Mais Popular
+                </div>
+            )}
+            <Card className={`h-full border-0 shadow-xl ${plano.popular ? 'bg-white pt-8' : 'bg-white'}`}>
+                <CardContent className="p-8">
+                    <div className="text-center mb-4">
+                        <Badge className="bg-orange-100 text-orange-700 mb-3">{plano.speed}</Badge>
+                        <h3 className="text-xl font-bold text-gray-900">{plano.name}</h3>
+                    </div>
+                    
+                    <div className="text-center mb-6">
+                        <div className="flex items-baseline justify-center gap-1">
+                            <span className="text-sm text-gray-500">R$</span>
+                            <span className="text-4xl font-black text-gray-900">{plano.price}</span>
+                            <span className="text-gray-500">/mês</span>
+                        </div>
+                    </div>
+
+                    <p className="text-gray-600 text-sm mb-6 text-center leading-relaxed">{plano.destaque}</p>
+
+                    <Button 
+                        className={`w-full ${plano.popular ? 'bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 shadow-lg shadow-orange-500/30' : 'bg-gray-900 hover:bg-gray-800'} text-white`}
+                        onClick={onContactClick}
+                    >
+                        Solicitar Proposta
+                        <ArrowRight className="ml-2 w-4 h-4" />
+                    </Button>
+                </CardContent>
+            </Card>
+        </motion.div>
+    );
 
     return (
         <section id="planos" className="py-24 bg-gradient-to-br from-gray-50 to-orange-50">
@@ -506,63 +569,63 @@ function PlanosSection({ onContactClick }) {
                     </p>
                 </motion.div>
 
-                <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                    {planos.map((plano, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.1 }}
-                            className={`relative rounded-3xl overflow-hidden ${plano.highlight ? 'ring-2 ring-orange-500' : ''}`}
-                        >
-                            {plano.highlight && (
-                                <div className="absolute top-0 left-0 right-0 bg-orange-500 text-white text-center text-sm font-semibold py-2">
-                                    Mais Popular
-                                </div>
-                            )}
-                            <Card className={`h-full border-0 shadow-xl ${plano.highlight ? 'bg-white pt-8' : 'bg-white'}`}>
-                                <CardContent className="p-8">
-                                    <div className="text-center mb-6">
-                                        <h3 className="text-2xl font-bold text-gray-900 mb-1">{plano.name}</h3>
-                                        <p className="text-gray-500">{plano.subtitle}</p>
-                                    </div>
-                                    
-                                    <div className="text-center mb-6">
-                                        <div className="flex items-baseline justify-center gap-1">
-                                            <span className="text-gray-500">A partir de</span>
-                                        </div>
-                                        <div className="flex items-baseline justify-center gap-1">
-                                            <span className="text-lg text-gray-500">R$</span>
-                                            <span className="text-5xl font-black text-gray-900">{plano.price}</span>
-                                            <span className="text-gray-500">/mês</span>
-                                        </div>
-                                        <p className="text-orange-500 font-semibold mt-2">{plano.speed}</p>
-                                    </div>
-
-                                    <ul className="space-y-3 mb-8">
-                                        {plano.features.map((feature, i) => (
-                                            <li key={i} className="flex items-center gap-3">
-                                                <div className="w-5 h-5 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
-                                                    <Check className="w-3 h-3 text-orange-600" />
-                                                </div>
-                                                <span className="text-gray-600">{feature}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
-
-                                    <Button 
-                                        className={`w-full ${plano.highlight ? 'bg-orange-500 hover:bg-orange-600' : 'bg-gray-900 hover:bg-gray-800'}`}
-                                        onClick={onContactClick}
-                                    >
-                                        Solicitar Proposta
-                                        <ArrowRight className="ml-2 w-4 h-4" />
-                                    </Button>
-                                </CardContent>
-                            </Card>
-                        </motion.div>
-                    ))}
+                {/* Municipal Plans */}
+                <div className="mb-16">
+                    <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-center mb-8"
+                    >
+                        <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+                            <MapPin className="w-6 h-6 inline-block mr-2 text-orange-500" />
+                            Megalink Municipal
+                        </h3>
+                        <p className="text-gray-600">Conectividade de alta performance para unidades dentro do mesmo município.</p>
+                    </motion.div>
+                    <div className="grid md:grid-cols-3 gap-6">
+                        {planosMunicipal.map(renderPlanCard)}
+                    </div>
                 </div>
+
+                {/* Estadual Plans */}
+                <div className="mb-16">
+                    <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-center mb-8"
+                    >
+                        <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+                            <Globe className="w-6 h-6 inline-block mr-2 text-orange-500" />
+                            Megalink Estadual
+                        </h3>
+                        <p className="text-gray-600">Interligação segura entre filiais localizadas em diferentes cidades do estado.</p>
+                    </motion.div>
+                    <div className="grid md:grid-cols-3 gap-6">
+                        {planosEstadual.map(renderPlanCard)}
+                    </div>
+                </div>
+
+                {/* Diferenciais */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="bg-gray-900 rounded-3xl p-8 md:p-12"
+                >
+                    <h3 className="text-2xl font-bold text-white text-center mb-8">Diferenciais Inclusos em Todos os Planos</h3>
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {diferenciais.map((item, i) => (
+                            <div key={i} className="flex items-start gap-3">
+                                <div className="w-10 h-10 bg-orange-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <item.icon className="w-5 h-5 text-orange-400" />
+                                </div>
+                                <p className="text-gray-300 text-sm leading-relaxed">{item.text}</p>
+                            </div>
+                        ))}
+                    </div>
+                </motion.div>
 
                 <motion.p
                     initial={{ opacity: 0 }}
