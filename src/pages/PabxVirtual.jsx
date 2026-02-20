@@ -123,7 +123,7 @@ function Header({ onContactClick }) {
 // Hero Section
 function HeroSection({ onContactClick }) {
     return (
-        <section className="relative min-h-[70vh] flex items-center overflow-hidden bg-gradient-to-br from-gray-900 via-orange-900 to-gray-900">
+        <section className="relative min-h-[50vh] flex items-center overflow-hidden bg-gradient-to-br from-gray-900 via-orange-900 to-gray-900">
             <div className="absolute inset-0 overflow-hidden">
                 <div className="absolute top-20 right-20 w-96 h-96 bg-orange-500/20 rounded-full blur-3xl" />
                 <div className="absolute bottom-20 left-20 w-96 h-96 bg-orange-600/10 rounded-full blur-3xl" />
@@ -152,7 +152,7 @@ function HeroSection({ onContactClick }) {
                 ))}
             </div>
 
-            <div className="relative max-w-7xl mx-auto px-6 py-16 lg:py-20">
+            <div className="relative max-w-7xl mx-auto px-6 py-10 lg:py-14">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
                         <Badge className="bg-orange-500/20 text-orange-300 border-orange-500/30 mb-6">
@@ -274,7 +274,7 @@ function RecursosSection() {
     ];
 
     return (
-        <section id="recursos" className="py-24 bg-white">
+        <section id="recursos" className="py-14 bg-white">
             <div className="max-w-7xl mx-auto px-6">
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
                     <Badge className="bg-orange-100 text-orange-700 mb-6">
@@ -342,7 +342,7 @@ function VantagensSection() {
     ];
 
     return (
-        <section id="vantagens" className="py-24 bg-gray-900 text-white">
+        <section id="vantagens" className="py-14 bg-gray-900 text-white">
             <div className="max-w-7xl mx-auto px-6">
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
                     <Badge className="bg-orange-500/20 text-orange-300 border-orange-500/30 mb-6">
@@ -424,7 +424,7 @@ function CalculadoraPABX() {
     );
 
     return (
-        <section id="planos" className="py-24 bg-gradient-to-br from-gray-50 to-orange-50">
+        <section id="planos" className="py-14 bg-gradient-to-br from-gray-50 to-orange-50">
             <div className="max-w-7xl mx-auto px-6">
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
                     <Badge className="bg-orange-100 text-orange-700 mb-6">
@@ -648,7 +648,7 @@ function SuporteSection() {
     ];
 
     return (
-        <section id="suporte" className="py-24 bg-white">
+        <section id="suporte" className="py-14 bg-white">
             <div className="max-w-7xl mx-auto px-6">
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
                     <Badge className="bg-orange-100 text-orange-700 mb-6">

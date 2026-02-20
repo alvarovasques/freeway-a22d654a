@@ -191,7 +191,7 @@ function CondominiosHeader({ onContactClick }) {
 // Hero Section
 function HeroSection({ onContactClick }) {
     return (
-        <section className="relative min-h-[70vh] flex items-center overflow-hidden">
+        <section className="relative min-h-[50vh] flex items-center overflow-hidden">
             {/* Background Image */}
             <div className="absolute inset-0">
                 <img 
@@ -202,7 +202,7 @@ function HeroSection({ onContactClick }) {
                 <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 via-gray-900/80 to-gray-900/60" />
             </div>
 
-            <div className="relative max-w-7xl mx-auto px-6 py-16 lg:py-20">
+            <div className="relative max-w-7xl mx-auto px-6 py-10 lg:py-14">
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                     {/* Content */}
                     <motion.div 
@@ -323,7 +323,7 @@ function HeroSection({ onContactClick }) {
 // Section Component
 function Section({ id, title, subtitle, children, dark = false }) {
     return (
-        <section id={id} className={`py-16 lg:py-24 ${dark ? 'bg-gray-900 text-white' : 'bg-gray-50'}`}>
+        <section id={id} className={`py-10 lg:py-14 ${dark ? 'bg-gray-900 text-white' : 'bg-gray-50'}`}>
             <div className="max-w-7xl mx-auto px-6">
                 <motion.div 
                     initial={{ opacity: 0, y: 20 }}
@@ -597,7 +597,7 @@ function AutoridadeSection({ onContactClick }) {
     ];
 
     return (
-        <section id="autoridade" className="py-16 lg:py-24 bg-gradient-to-br from-orange-500 to-orange-600">
+        <section id="autoridade" className="py-10 lg:py-14 bg-gradient-to-br from-orange-500 to-orange-600">
             <div className="max-w-7xl mx-auto px-6">
                 <motion.div 
                     initial={{ opacity: 0, y: 20 }}

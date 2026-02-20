@@ -143,7 +143,7 @@ export default function MobilePlansSection({ onContactClick }) {
     // currentPlans only used for mobile tab now; M2M uses m2mCategories directly
 
     return (
-        <section id="telefonia" className="py-24 bg-gray-900 relative overflow-hidden" aria-label="Planos de Telefonia Móvel e M2M - Freeway Tecnologia">
+        <section id="telefonia" className="py-14 bg-gray-900 relative overflow-hidden" aria-label="Planos de Telefonia Móvel e M2M - Freeway Tecnologia">
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-5">
                 <div className="absolute inset-0" style={{

@@ -28,7 +28,7 @@ export default function InstitutionalSection() {
     ];
 
     return (
-        <section id="quem-somos" className="py-24 bg-gradient-to-b from-gray-50 to-white" aria-label="Sobre a Freeway Tecnologia - Mais de 20 anos de experiência">
+        <section id="quem-somos" className="py-14 bg-gradient-to-b from-gray-50 to-white" aria-label="Sobre a Freeway Tecnologia - Mais de 20 anos de experiência">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                     {/* Content */}
