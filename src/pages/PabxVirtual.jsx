@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import logo from '@/assets/logo.png';
 import ContactModal from '@/components/freeway/ContactModal';
+import SEOHead from '@/components/freeway/SEOHead';
 
 // Header Component
 function Header({ onContactClick }) {
@@ -767,11 +768,16 @@ export default function PabxVirtual() {
     }, []);
 
     useEffect(() => {
-        document.title = 'PABX Virtual Freeway | Telefonia Empresarial na Nuvem | URA e Gravação MS';
+        window.scrollTo(0, 0);
     }, []);
 
     return (
         <div className="min-h-screen bg-white">
+            <SEOHead
+                title="PABX Virtual | Telefonia Empresarial na Nuvem | Freeway Campo Grande MS"
+                description="PABX Virtual com URA completa, gravação de chamadas e portabilidade numérica a partir de R$ 99/mês. Telefonia empresarial na nuvem sem investimento em hardware."
+                canonical="https://freeway.lovable.app/PabxVirtual"
+            />
             <Header onContactClick={openContactModal} />
             <main>
                 <HeroSection onContactClick={openContactModal} />

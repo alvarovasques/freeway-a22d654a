@@ -86,8 +86,11 @@ export default function HeroSection({ onContactClick }) {
                                 <div className="relative">
                                     <img 
                                         src={mapaMS} 
-                                        alt="Mapa de cobertura Freeway - Cidades atendidas no Mato Grosso do Sul" 
+                                        alt="Mapa de cobertura Freeway - Cidades atendidas com fibra óptica no Mato Grosso do Sul" 
                                         className="w-full h-auto rounded-2xl"
+                                        loading="eager"
+                                        width="600"
+                                        height="500"
                                     />
                                 </div>
                             </div>

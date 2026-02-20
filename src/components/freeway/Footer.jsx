@@ -29,7 +29,7 @@ export default function Footer({ onContactClick }) {
     };
 
     return (
-        <footer id="contato" className="bg-gray-900 text-white">
+        <footer id="contato" className="bg-gray-900 text-white" role="contentinfo">
             {/* Main Footer */}
             <div className="max-w-7xl mx-auto px-6 py-16">
                 <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12">
@@ -38,8 +38,9 @@ export default function Footer({ onContactClick }) {
                         <div className="mb-6">
                             <img 
                                 src={logo} 
-                                alt="Freeway Tecnologia" 
+                                alt="Freeway Tecnologia - Provedor de Internet Empresarial em Campo Grande MS" 
                                 className="h-16 w-auto"
+                                loading="lazy"
                             />
                         </div>
                         <p className="text-gray-400 leading-relaxed mb-6 max-w-sm">
