@@ -50,7 +50,7 @@ export default function Footer({ onContactClick }) {
                         <div className="space-y-3">
                             <button onClick={onContactClick} className="flex items-center gap-3 text-gray-400 hover:text-orange-400 transition-colors">
                                 <Phone className="w-5 h-5" />
-                                <span>(67) 3025-3131</span>
+                                <span>(67) 3304-3003</span>
                             </button>
                             <div className="flex items-center gap-3 text-gray-400">
                                 <MapPin className="w-5 h-5 flex-shrink-0" />
