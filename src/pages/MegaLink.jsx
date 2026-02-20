@@ -160,7 +160,7 @@ function Header({ onContactClick }) {
 // Hero Section
 function HeroSection({ onContactClick }) {
     return (
-        <section className="relative min-h-[70vh] flex items-center overflow-hidden bg-gradient-to-br from-gray-900 via-orange-900 to-gray-900">
+        <section className="relative min-h-[50vh] flex items-center overflow-hidden bg-gradient-to-br from-gray-900 via-orange-900 to-gray-900">
             {/* Network Animation Background */}
             <div className="absolute inset-0 overflow-hidden">
                 <div className="absolute top-20 right-20 w-96 h-96 bg-orange-500/20 rounded-full blur-3xl" />
@@ -209,7 +209,7 @@ function HeroSection({ onContactClick }) {
                 ))}
             </div>
 
-            <div className="relative max-w-7xl mx-auto px-6 py-16 lg:py-20">
+            <div className="relative max-w-7xl mx-auto px-6 py-10 lg:py-14">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
@@ -340,7 +340,7 @@ function DiferenciaisSection() {
     ];
 
     return (
-        <section id="diferenciais" className="py-24 bg-white">
+        <section id="diferenciais" className="py-14 bg-white">
             <div className="max-w-7xl mx-auto px-6">
                 <motion.div 
                     initial={{ opacity: 0, y: 20 }}
@@ -417,7 +417,7 @@ function EspecificacoesSection() {
     ];
 
     return (
-        <section id="especificacoes" className="py-24 bg-gray-900 text-white">
+        <section id="especificacoes" className="py-14 bg-gray-900 text-white">
             <div className="max-w-7xl mx-auto px-6">
                 <motion.div 
                     initial={{ opacity: 0, y: 20 }}
@@ -559,7 +559,7 @@ function PlanosSection({ onContactClick }) {
     );
 
     return (
-        <section id="planos" className="py-24 bg-gradient-to-br from-gray-50 to-orange-50">
+        <section id="planos" className="py-14 bg-gradient-to-br from-gray-50 to-orange-50">
             <div className="max-w-7xl mx-auto px-6">
                 <motion.div 
                     initial={{ opacity: 0, y: 20 }}
@@ -672,7 +672,7 @@ function SuporteSection() {
     ];
 
     return (
-        <section id="suporte" className="py-24 bg-white">
+        <section id="suporte" className="py-14 bg-white">
             <div className="max-w-7xl mx-auto px-6">
                 <motion.div 
                     initial={{ opacity: 0, y: 20 }}

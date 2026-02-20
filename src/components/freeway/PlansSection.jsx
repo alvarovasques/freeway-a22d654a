@@ -51,7 +51,7 @@ export default function PlansSection({ onContactClick }) {
     const activeCategory = categories.find(c => c.key === activeTab);
 
     return (
-        <section id="planos" className="py-24 bg-gradient-to-b from-white to-gray-50" aria-label="Planos de Internet Empresarial - Fibra Óptica MS">
+        <section id="planos" className="py-14 bg-gradient-to-b from-white to-gray-50" aria-label="Planos de Internet Empresarial - Fibra Óptica MS">
             <div className="max-w-7xl mx-auto px-6">
                 {/* Header */}
                 <motion.div

@@ -73,14 +73,14 @@ export default function FAQSection() {
     ];
 
     return (
-        <section className="py-24 bg-white" id="faq">
+        <section className="py-14 bg-white" id="faq">
             <div className="max-w-5xl mx-auto px-6">
                 {/* Header */}
                 <motion.div 
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-center mb-16"
+                    className="text-center mb-10"
                 >
                     <span className="inline-flex items-center gap-2 bg-orange-100 text-orange-700 px-4 py-2 rounded-full text-sm font-semibold mb-6">
                         <HelpCircle className="w-4 h-4" />

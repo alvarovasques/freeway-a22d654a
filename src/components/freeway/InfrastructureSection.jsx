@@ -49,7 +49,7 @@ export default function InfrastructureSection() {
     ];
 
     return (
-        <section id="infraestrutura" className="py-24 bg-gray-900 relative overflow-hidden" aria-label="Infraestrutura de Rede 100Gbps - Fibra Óptica Campo Grande MS">
+        <section id="infraestrutura" className="py-14 bg-gray-900 relative overflow-hidden" aria-label="Infraestrutura de Rede 100Gbps - Fibra Óptica Campo Grande MS">
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-5">
                 <div className="absolute inset-0" style={{
@@ -64,7 +64,7 @@ export default function InfrastructureSection() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-center mb-16"
+                    className="text-center mb-10"
                 >
                     <span className="inline-flex items-center gap-2 bg-orange-500/20 text-orange-400 px-4 py-2 rounded-full text-sm font-semibold mb-6">
                         <Network className="w-4 h-4" />
