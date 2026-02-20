@@ -73,7 +73,7 @@ export default function ContactModal({ open, onOpenChange }) {
                                     className="w-full bg-green-600 hover:bg-green-700 text-white"
                                     onClick={() => {
                                         const message = encodeURIComponent('Olá! Vim pelo site da Freeway e tenho interesse em mais informações sobre os planos de internet.');
-                                        window.open(`https://web.whatsapp.com/send?phone=556740423345&text=${message}`, '_blank');
+                                        window.open(`https://wa.me/556733043003?text=${message}`, '_blank');
                                         onOpenChange(false);
                                     }}
                                 >

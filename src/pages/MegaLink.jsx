@@ -41,7 +41,7 @@ function Header({ onContactClick }) {
             <div className="bg-gray-900 text-white py-2 hidden md:block">
                 <div className="max-w-7xl mx-auto px-6 flex justify-between items-center text-sm">
                     <div className="flex items-center gap-6">
-                        <a href="https://api.whatsapp.com/send?phone=556733043003" className="flex items-center gap-2 hover:text-orange-400 transition-colors">
+                        <a href="https://wa.me/556733043003?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20Mega%20Link." target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-orange-400 transition-colors">
                             <Phone className="w-4 h-4" />
                             <span>WhatsApp - (67) 3304-3003</span>
                         </a>
@@ -735,7 +735,7 @@ function Footer({ onContactClick }) {
                         </p>
 
                         <div className="space-y-3">
-                            <a href="https://api.whatsapp.com/send?phone=556733043003" className="flex items-center gap-3 text-gray-400 hover:text-orange-400 transition-colors">
+                            <a href="https://wa.me/556733043003?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20Mega%20Link." target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-gray-400 hover:text-orange-400 transition-colors">
                                 <Phone className="w-5 h-5" />
                                 <span>(67) 3304-3003</span>
                             </a>
