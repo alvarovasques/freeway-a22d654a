@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import logo from '@/assets/logo.png';
 import ContactModal from '@/components/freeway/ContactModal';
+import SEOHead from '@/components/freeway/SEOHead';
 
 // Header Component
 function Header({ onContactClick }) {
@@ -682,11 +683,16 @@ export default function RedeNeutra() {
     }, []);
 
     useEffect(() => {
-        document.title = 'Rede Neutra Freeway | Infraestrutura de Fibra para Provedores ISP | Campo Grande MS';
+        window.scrollTo(0, 0);
     }, []);
 
     return (
         <div className="min-h-screen bg-white">
+            <SEOHead
+                title="Rede Neutra | Infraestrutura Fibra Óptica para ISPs | Freeway Campo Grande MS"
+                description="Rede Neutra para provedores de internet (ISPs) em Campo Grande MS. Infraestrutura FTTH pronta para uso, VLAN exclusiva, OLT própria. Porta a partir de R$ 20,00 com Link Freeway."
+                canonical="https://freeway.lovable.app/RedeNeutra"
+            />
             <Header onContactClick={openContactModal} />
             <main>
                 <HeroSection onContactClick={openContactModal} />

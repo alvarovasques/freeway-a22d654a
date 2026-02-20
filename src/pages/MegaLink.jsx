@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import logo from '@/assets/logo.png';
 import ContactModal from '@/components/freeway/ContactModal';
+import SEOHead from '@/components/freeway/SEOHead';
 
 // Header Component
 function Header({ onContactClick }) {
@@ -816,11 +817,16 @@ export default function MegaLink() {
     }, []);
 
     useEffect(() => {
-        document.title = 'Mega Link Freeway | Conexão Privada Ponto a Ponto | Interligação de Filiais MS';
+        window.scrollTo(0, 0);
     }, []);
 
     return (
         <div className="min-h-screen bg-white">
+            <SEOHead
+                title="Mega Link | Conexão Privada Ponto a Ponto | Freeway Campo Grande MS"
+                description="Interligação ponto a ponto (LAN to LAN) independente da internet. Conecte matriz e filiais com segurança total, baixa latência e velocidades de até 100Gbps em Campo Grande MS."
+                canonical="https://freeway.lovable.app/MegaLink"
+            />
             <Header onContactClick={openContactModal} />
             <main>
                 <HeroSection onContactClick={openContactModal} />

@@ -60,16 +60,16 @@ export default function Header({ onContactClick }) {
                 <div className="max-w-7xl mx-auto px-6 py-3">
                     <div className="flex items-center justify-between">
                         {/* Logo */}
-                        <a href="#" className="flex items-center">
+                        <a href="/" className="flex items-center">
                             <img 
                                 src={logo} 
-                                alt="Freeway Tecnologia" 
+                                alt="Freeway Tecnologia - Internet Empresarial Fibra Óptica Campo Grande MS" 
                                 className="h-24 w-auto"
                             />
                         </a>
 
                         {/* Desktop Navigation */}
-                        <nav className="hidden lg:flex items-center gap-8">
+                        <nav className="hidden lg:flex items-center gap-8" aria-label="Navegação principal">
                             {navItems.map((item) => (
                                 item.hasDropdown ? (
                                     <div key={item.label} className="relative group">

@@ -36,7 +36,7 @@ import {
 import { AnimatePresence } from 'framer-motion';
 import logo from '@/assets/logo.png';
 import condominiosHeroBg from '@/assets/condominios-hero-bg.jpg';
-import ContactModal from '@/components/freeway/ContactModal';
+import SEOHead from '@/components/freeway/SEOHead';
 
 // Header Component
 function CondominiosHeader({ onContactClick }) {
@@ -717,12 +717,16 @@ export default function Condominios() {
     }, []);
 
     useEffect(() => {
-        document.title = 'Freeway Condomínios Inteligentes | Fibra Óptica, Segurança e Wi-Fi para Condomínios em Campo Grande MS';
         window.scrollTo(0, 0);
     }, []);
 
     return (
         <div className="min-h-screen bg-white">
+            <SEOHead
+                title="Condomínios Inteligentes | Fibra Óptica e Segurança | Freeway Campo Grande MS"
+                description="Infraestrutura FTTH completa para condomínios em Campo Grande MS. Internet fibra óptica, câmeras com IA, Wi-Fi inteligente e gestão centralizada. Solicite estudo de viabilidade gratuito."
+                canonical="https://freeway.lovable.app/Condominios"
+            />
             <CondominiosHeader onContactClick={openContactModal} />
             <main>
                 <HeroSection onContactClick={openContactModal} />
