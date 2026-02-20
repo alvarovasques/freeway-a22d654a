@@ -159,7 +159,7 @@ export default function FAQSection() {
                     <Button 
                         size="lg" 
                         className="bg-orange-500 hover:bg-orange-600 text-white gap-2"
-                        onClick={() => window.open('https://api.whatsapp.com/send?phone=556730253131', '_blank')}
+                        onClick={() => window.open('https://api.whatsapp.com/send?phone=556733043003', '_blank')}
                     >
                         <MessageCircle className="w-5 h-5" />
                         Falar com Consultor Especialista
