@@ -37,6 +37,7 @@ import { AnimatePresence } from 'framer-motion';
 import logo from '@/assets/logo.png';
 import condominiosHeroBg from '@/assets/condominios-hero-bg.jpg';
 import SEOHead from '@/components/freeway/SEOHead';
+import ContactModal from '@/components/freeway/ContactModal';
 
 // Header Component
 function CondominiosHeader({ onContactClick }) {
