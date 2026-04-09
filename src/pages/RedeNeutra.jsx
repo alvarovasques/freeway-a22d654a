@@ -40,9 +40,9 @@ function Header({ onContactClick }) {
             <div className="bg-gray-900 text-white py-2 hidden md:block">
                 <div className="max-w-7xl mx-auto px-6 flex justify-between items-center text-sm">
                     <div className="flex items-center gap-6">
-                        <a href="https://wa.me/556733043003?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20a%20Rede%20Neutra." target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-orange-400 transition-colors">
+                        <a href="https://wa.me/556730253131?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20a%20Rede%20Neutra." target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-orange-400 transition-colors">
                             <Phone className="w-4 h-4" />
-                            <span>WhatsApp - (67) 3304-3003</span>
+                            <span>WhatsApp - (67) 3025-3131</span>
                         </a>
                         <div className="flex items-center gap-2 text-gray-400">
                             <MapPin className="w-4 h-4" />
@@ -599,9 +599,9 @@ function Footer({ onContactClick }) {
                         <p className="text-sm text-gray-500 mb-6">Uma empresa do Grupo Easy Net</p>
 
                         <div className="space-y-3">
-                            <a href="https://wa.me/556733043003?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20a%20Rede%20Neutra." target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-gray-400 hover:text-orange-400 transition-colors">
+                            <a href="https://wa.me/556730253131?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20a%20Rede%20Neutra." target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-gray-400 hover:text-orange-400 transition-colors">
                                 <Phone className="w-5 h-5" />
-                                <span>(67) 3304-3003</span>
+                                <span>(67) 3025-3131</span>
                             </a>
                             <div className="flex items-center gap-3 text-gray-400">
                                 <MapPin className="w-5 h-5 flex-shrink-0" />
