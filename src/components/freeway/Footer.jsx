@@ -65,14 +65,14 @@ export default function Footer({ onContactClick }) {
                         {/* Social */}
                         <div className="flex gap-3 mt-6">
                             {[
-                                { icon: Facebook, href: '#' },
-                                { icon: Instagram, href: '#' },
-                                { icon: Youtube, href: '#' },
-                                { icon: Linkedin, href: '#' },
+                                { icon: Facebook, href: 'https://www.facebook.com/people/Freeway-Tecnologia/61587954098786/' },
+                                { icon: Instagram, href: 'https://www.instagram.com/freewaytecnologia/' },
                             ].map((social, i) => (
                                 <a 
                                     key={i} 
                                     href={social.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="w-10 h-10 bg-gray-800 hover:bg-orange-500 rounded-lg flex items-center justify-center transition-colors"
                                 >
                                     <social.icon className="w-5 h-5" />
