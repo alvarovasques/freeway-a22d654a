@@ -1,32 +1,29 @@
 name: Deploy to VPS
-
 on:
   push:
     branches:
       - main
-
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ghcr.io/alvarovasques/freewaynet
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout código
         uses: actions/checkout@v4
-
       - name: Login no GitHub Container Registry
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Build e push da imagem
         uses: docker/build-push-action@v5
         with:
           context: .
           push: true
           tags: ${{ env.IMAGE_NAME }}:latest
+      - name: Trigger deploy no Portainer
+        run: |
+          curl -X POST "${{ secrets.PORTAINER_WEBHOOK_URL }}"
